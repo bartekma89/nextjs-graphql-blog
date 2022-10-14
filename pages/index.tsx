@@ -1,7 +1,7 @@
 import type { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { PostCard, Categories, PostWidget } from "../components";
-import { GetAllPostsQuery } from "../generated-gql/graphql";
+import { GetAllPostsQuery } from "../generated-graphql/graphql";
 import { apolloClient } from "../graphql/apolloClient";
 import { GetAllPostsDocument } from "../services/getAllPosts";
 
@@ -29,6 +29,7 @@ const PostsPage = ({
                     bio: post.node.author?.bio,
                     name: post.node.author?.name,
                   },
+                  createdAt: post.node.createdAt,
                 }}
                 key={post.node.slug}
               />

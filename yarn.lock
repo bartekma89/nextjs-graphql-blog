@@ -637,7 +637,7 @@
     "@graphql-codegen/visitor-plugin-common" "^2.12.1"
     tslib "~2.4.0"
 
-"@graphql-codegen/plugin-helpers@^2.3.1", "@graphql-codegen/plugin-helpers@^2.6.2":
+"@graphql-codegen/plugin-helpers@^2.6.2":
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/plugin-helpers/-/plugin-helpers-2.7.1.tgz#de999bdf8a1485f6f3c4c5f21cfb038e99d67e3e"
   integrity sha512-wpEShhwbQp8pqXolnSCNaj0pU91LbuBvYHpYqm96TUqyeKQYAYRVmw3JIt0g8UQpKYhg8lYIDwWdcINOYqkGLg==
@@ -702,7 +702,7 @@
     auto-bind "~4.0.0"
     tslib "~2.4.0"
 
-"@graphql-codegen/visitor-plugin-common@2.12.2", "@graphql-codegen/visitor-plugin-common@^2.12.1", "@graphql-codegen/visitor-plugin-common@^2.12.2", "@graphql-codegen/visitor-plugin-common@^2.9.1":
+"@graphql-codegen/visitor-plugin-common@2.12.2", "@graphql-codegen/visitor-plugin-common@^2.12.1", "@graphql-codegen/visitor-plugin-common@^2.12.2":
   version "2.12.2"
   resolved "https://registry.yarnpkg.com/@graphql-codegen/visitor-plugin-common/-/visitor-plugin-common-2.12.2.tgz#70eefed5567dbec6d289b05047b04bc9faae428e"
   integrity sha512-UZJxY3mWwaM7yii7mSbl6Rxb6sJlpwGZc3QAs2Yd8MnYjXFPTBR0OO6aBTr9xuftl0pYwHu/pVK7vTPNnVmPww==
@@ -2750,15 +2750,6 @@ grapheme-splitter@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
-
-graphql-codegen-apollo-next-ssr@^1.7.4:
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/graphql-codegen-apollo-next-ssr/-/graphql-codegen-apollo-next-ssr-1.7.4.tgz#a270aa2a85ace2c1343b199e25199843923f825e"
-  integrity sha512-s/VgiPpyU6tLCIpZjkfSu0hzEJC7I8JX9IXA2aAN4GDk/3B77L9ZgHWhi07DAhP9KZk+RTGuUwFmVHsL0T+TNg==
-  dependencies:
-    "@graphql-codegen/plugin-helpers" "^2.3.1"
-    "@graphql-codegen/visitor-plugin-common" "^2.9.1"
-    auto-bind "~4.0.0"
 
 graphql-config@4.3.6:
   version "4.3.6"
