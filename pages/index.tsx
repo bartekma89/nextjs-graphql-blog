@@ -54,7 +54,7 @@ export const getStaticProps = async () => {
     query: GetAllPostsDocument,
   });
 
-  if (!data.postsConnection.edges) {
+  if (!data) {
     return {
       props: {
         posts: [],
