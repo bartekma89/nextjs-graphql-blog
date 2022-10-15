@@ -17,7 +17,7 @@ const PostsPage = ({
       </Head>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
-          {posts?.map((post, index) => {
+          {posts.map((post, index) => {
             return (
               <PostCard
                 post={{
@@ -50,13 +50,15 @@ const PostsPage = ({
 export default PostsPage;
 
 export const getStaticProps = async () => {
-  const { data, loading } = await apolloClient.query<GetAllPostsQuery>({
+  const { data } = await apolloClient.query<GetAllPostsQuery>({
     query: GetAllPostsDocument,
   });
 
-  if (loading || !data.postsConnection.edges) {
+  if (!data.postsConnection.edges) {
     return {
-      props: {},
+      props: {
+        posts: [],
+      },
       notFound: true,
     };
   }
