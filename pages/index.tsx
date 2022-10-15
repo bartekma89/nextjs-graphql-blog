@@ -50,11 +50,11 @@ const PostsPage = ({
 export default PostsPage;
 
 export const getStaticProps = async () => {
-  const { data } = await apolloClient.query<GetAllPostsQuery>({
+  const { data, loading } = await apolloClient.query<GetAllPostsQuery>({
     query: GetAllPostsDocument,
   });
 
-  if (!data?.postsConnection.edges) {
+  if (loading || !data.postsConnection.edges) {
     return {
       props: {},
       notFound: true,
