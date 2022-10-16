@@ -63,18 +63,19 @@ export const getStaticProps = async () => {
 
   console.log(data);
 
-  if (!data?.data) {
-    return {
-      props: {
-        posts: [],
-      },
-      notFound: true,
-    };
-  }
+  // if (!data?.data) {
+  //   return {
+  //     props: {
+  //       posts: [],
+  //     },
+  //     notFound: true,
+  //   };
+  // }
 
   return {
     props: {
-      posts: data.data.postsConnection.edges,
+      // posts: data.data.postsConnection.edges,
+      posts: [],
     },
   };
 };
