@@ -5,9 +5,16 @@ import { GetAllPostsQuery } from "../generated-graphql/graphql";
 import { apolloClient } from "../graphql/apolloClient";
 import { GetAllPostsDocument } from "../services/getAllPosts";
 
+// ----
+import { useQuery } from "@apollo/client";
+
 const PostsPage = ({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { data } = useQuery(GetAllPostsDocument);
+
+  console.log(data);
+
   return (
     <div className="container mx-auto px-10 mb-8">
       <Head>
@@ -54,7 +61,9 @@ export const getStaticProps = async () => {
     query: GetAllPostsDocument,
   });
 
-  if (!data?.data.postsConnection) {
+  console.log(data);
+
+  if (!data?.data) {
     return {
       props: {
         posts: [],
