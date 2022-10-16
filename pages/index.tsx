@@ -17,7 +17,7 @@ const PostsPage = ({
       </Head>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
-          {posts?.map((post, index) => {
+          {posts?.map((post) => {
             return (
               <PostCard
                 post={{
@@ -54,7 +54,9 @@ export const getStaticProps = async () => {
     query: GetAllPostsDocument,
   });
 
-  if (!data.postsConnection.edges) {
+  console.log(data);
+
+  if (!data) {
     return {
       props: {},
       notFound: true,
