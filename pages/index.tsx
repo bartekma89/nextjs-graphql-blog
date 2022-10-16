@@ -5,16 +5,9 @@ import { GetAllPostsQuery } from "../generated-graphql/graphql";
 import { apolloClient } from "../graphql/apolloClient";
 import { GetAllPostsDocument } from "../services/getAllPosts";
 
-// ----
-import { useQuery } from "@apollo/client";
-
 const PostsPage = ({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { data } = useQuery(GetAllPostsDocument);
-
-  console.log(data);
-
   return (
     <div className="container mx-auto px-10 mb-8">
       <Head>
@@ -24,7 +17,7 @@ const PostsPage = ({
       </Head>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
-          {/* {posts.map((post, index) => {
+          {posts?.map((post) => {
             return (
               <PostCard
                 post={{
@@ -41,7 +34,7 @@ const PostsPage = ({
                 key={post.node.slug}
               />
             );
-          })} */}
+          })}
         </div>
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-8 ">
@@ -57,25 +50,22 @@ const PostsPage = ({
 export default PostsPage;
 
 export const getStaticProps = async () => {
-  const data = await apolloClient.query<GetAllPostsQuery>({
+  const { data } = await apolloClient.query<GetAllPostsQuery>({
     query: GetAllPostsDocument,
   });
 
   console.log(data);
 
-  // if (!data?.data) {
-  //   return {
-  //     props: {
-  //       posts: [],
-  //     },
-  //     notFound: true,
-  //   };
-  // }
+  if (!data) {
+    return {
+      props: {},
+      notFound: true,
+    };
+  }
 
   return {
     props: {
-      // posts: data.data.postsConnection.edges,
-      posts: [],
+      posts: data.postsConnection.edges,
     },
   };
 };
