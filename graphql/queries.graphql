@@ -1,0 +1,54 @@
+query GetAllPosts {
+  postsConnection {
+    edges {
+      node {
+        author {
+          bio
+          name
+          id
+          photo {
+            url
+          }
+        }
+        createdAt
+        slug
+        title
+        excerpt
+        featuredImage {
+          url
+        }
+        categhories {
+          name
+          slug
+        }
+      }
+    }
+  }
+}
+
+query GetRecentedPosts {
+  posts(orderBy: createdAt_ASC, last: 3) {
+    title
+    featuredImage {
+      url
+    }
+    createdAt
+    slug
+  }
+}
+
+query GetSimilarPosts($slug: String!, $categories: [String!]) {
+  posts(
+    where: {
+      slug_not: $slug
+      AND: { categhories_some: { slug_in: $categories } }
+    }
+  ) {
+    title
+    featuredImage {
+      url
+    }
+    createdAt
+    slug
+  }
+}

@@ -6,6 +6,9 @@ const nextConfig = {
     domains: ["media.graphassets.com"],
     formats: ["image/avif", "image/webp"],
   },
+  env: {
+    graphcmsURI: process.env.NEXT_PUBLIC_GRAPHCMS_URI,
+  },
 };
 
 module.exports = nextConfig;
