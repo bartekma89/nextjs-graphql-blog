@@ -3,7 +3,7 @@ import Head from "next/head";
 import { PostCard, Categories, PostWidget } from "../components";
 import { GetAllPostsQuery } from "../generated-graphql/graphql";
 import { apolloClient } from "../graphql/apolloClient";
-import { GetAllPostsDocument } from "../services/getAllPosts";
+import { GET_ALL_POSTS } from "../services/getAllPosts";
 
 const PostsPage = ({
   posts,
@@ -51,10 +51,8 @@ export default PostsPage;
 
 export const getStaticProps = async () => {
   const { data } = await apolloClient.query<GetAllPostsQuery>({
-    query: GetAllPostsDocument,
+    query: GET_ALL_POSTS,
   });
-
-  console.log(data);
 
   if (!data) {
     return {

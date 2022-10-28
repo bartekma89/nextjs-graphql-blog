@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-export const GetAllPostsDocument = gql`
+export const GET_ALL_POSTS = gql`
   query GetAllPosts {
     postsConnection {
       edges {
