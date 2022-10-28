@@ -52,3 +52,10 @@ query GetSimilarPosts($slug: String!, $categories: [String!]) {
     slug
   }
 }
+
+query getCategories {
+  categories {
+    name
+    slug
+  }
+}

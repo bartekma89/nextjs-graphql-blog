@@ -1,8 +1,7 @@
-import { gql, request } from "graphql-request";
+import { gql } from "graphql-request";
 
 import { GetRecentedPostsQuery } from "../generated-graphql/graphql";
 import { requestClient } from "../graphql/graphqlRequest";
-import { graphqlAPI } from "../lib";
 
 export const GET_RECENT_POSTS = gql`
   query GetPostDetails {

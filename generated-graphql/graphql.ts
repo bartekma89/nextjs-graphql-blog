@@ -1239,15 +1239,15 @@ export type BatchPayload = {
   count: Scalars['Long'];
 };
 
-export type Categhory = Node & {
-  __typename?: 'Categhory';
+export type Category = Node & {
+  __typename?: 'Category';
   /** The time the document was created */
   createdAt: Scalars['DateTime'];
   /** User that created this document */
   createdBy?: Maybe<User>;
   /** Get the document in other stages */
-  documentInStages: Array<Categhory>;
-  /** List of Categhory versions */
+  documentInStages: Array<Category>;
+  /** List of Category versions */
   history: Array<Version>;
   /** The unique identifier */
   id: Scalars['ID'];
@@ -1268,26 +1268,26 @@ export type Categhory = Node & {
 };
 
 
-export type CateghoryCreatedByArgs = {
+export type CategoryCreatedByArgs = {
   locales?: InputMaybe<Array<Locale>>;
 };
 
 
-export type CateghoryDocumentInStagesArgs = {
+export type CategoryDocumentInStagesArgs = {
   includeCurrent?: Scalars['Boolean'];
   inheritLocale?: Scalars['Boolean'];
   stages?: Array<Stage>;
 };
 
 
-export type CateghoryHistoryArgs = {
+export type CategoryHistoryArgs = {
   limit?: Scalars['Int'];
   skip?: Scalars['Int'];
   stageOverride?: InputMaybe<Stage>;
 };
 
 
-export type CateghoryPostsArgs = {
+export type CategoryPostsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -1299,12 +1299,12 @@ export type CateghoryPostsArgs = {
 };
 
 
-export type CateghoryPublishedByArgs = {
+export type CategoryPublishedByArgs = {
   locales?: InputMaybe<Array<Locale>>;
 };
 
 
-export type CateghoryScheduledInArgs = {
+export type CategoryScheduledInArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -1315,28 +1315,28 @@ export type CateghoryScheduledInArgs = {
 };
 
 
-export type CateghoryUpdatedByArgs = {
+export type CategoryUpdatedByArgs = {
   locales?: InputMaybe<Array<Locale>>;
 };
 
-export type CateghoryConnectInput = {
+export type CategoryConnectInput = {
   /** Allow to specify document position in list of connected documents, will default to appending at end of list */
   position?: InputMaybe<ConnectPositionInput>;
   /** Document to connect */
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 /** A connection to a list of items. */
-export type CateghoryConnection = {
-  __typename?: 'CateghoryConnection';
+export type CategoryConnection = {
+  __typename?: 'CategoryConnection';
   aggregate: Aggregate;
   /** A list of edges. */
-  edges: Array<CateghoryEdge>;
+  edges: Array<CategoryEdge>;
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
 };
 
-export type CateghoryCreateInput = {
+export type CategoryCreateInput = {
   createdAt?: InputMaybe<Scalars['DateTime']>;
   name: Scalars['String'];
   posts?: InputMaybe<PostCreateManyInlineInput>;
@@ -1344,37 +1344,37 @@ export type CateghoryCreateInput = {
   updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
 
-export type CateghoryCreateManyInlineInput = {
-  /** Connect multiple existing Categhory documents */
-  connect?: InputMaybe<Array<CateghoryWhereUniqueInput>>;
-  /** Create and connect multiple existing Categhory documents */
-  create?: InputMaybe<Array<CateghoryCreateInput>>;
+export type CategoryCreateManyInlineInput = {
+  /** Connect multiple existing Category documents */
+  connect?: InputMaybe<Array<CategoryWhereUniqueInput>>;
+  /** Create and connect multiple existing Category documents */
+  create?: InputMaybe<Array<CategoryCreateInput>>;
 };
 
-export type CateghoryCreateOneInlineInput = {
-  /** Connect one existing Categhory document */
-  connect?: InputMaybe<CateghoryWhereUniqueInput>;
-  /** Create and connect one Categhory document */
-  create?: InputMaybe<CateghoryCreateInput>;
+export type CategoryCreateOneInlineInput = {
+  /** Connect one existing Category document */
+  connect?: InputMaybe<CategoryWhereUniqueInput>;
+  /** Create and connect one Category document */
+  create?: InputMaybe<CategoryCreateInput>;
 };
 
 /** An edge in a connection. */
-export type CateghoryEdge = {
-  __typename?: 'CateghoryEdge';
+export type CategoryEdge = {
+  __typename?: 'CategoryEdge';
   /** A cursor for use in pagination. */
   cursor: Scalars['String'];
   /** The item at the end of the edge. */
-  node: Categhory;
+  node: Category;
 };
 
 /** Identifies documents */
-export type CateghoryManyWhereInput = {
+export type CategoryManyWhereInput = {
   /** Logical AND on all given filters. */
-  AND?: InputMaybe<Array<CateghoryWhereInput>>;
+  AND?: InputMaybe<Array<CategoryWhereInput>>;
   /** Logical NOT on all given filters combined by AND. */
-  NOT?: InputMaybe<Array<CateghoryWhereInput>>;
+  NOT?: InputMaybe<Array<CategoryWhereInput>>;
   /** Logical OR on all given filters. */
-  OR?: InputMaybe<Array<CateghoryWhereInput>>;
+  OR?: InputMaybe<Array<CategoryWhereInput>>;
   /** Contains search across all appropriate fields. */
   _search?: InputMaybe<Scalars['String']>;
   createdAt?: InputMaybe<Scalars['DateTime']>;
@@ -1393,9 +1393,9 @@ export type CateghoryManyWhereInput = {
   /** All values that are not contained in given list. */
   createdAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
   createdBy?: InputMaybe<UserWhereInput>;
-  documentInStages_every?: InputMaybe<CateghoryWhereStageInput>;
-  documentInStages_none?: InputMaybe<CateghoryWhereStageInput>;
-  documentInStages_some?: InputMaybe<CateghoryWhereStageInput>;
+  documentInStages_every?: InputMaybe<CategoryWhereStageInput>;
+  documentInStages_none?: InputMaybe<CategoryWhereStageInput>;
+  documentInStages_some?: InputMaybe<CategoryWhereStageInput>;
   id?: InputMaybe<Scalars['ID']>;
   /** All values containing the given string. */
   id_contains?: InputMaybe<Scalars['ID']>;
@@ -1493,7 +1493,7 @@ export type CateghoryManyWhereInput = {
   updatedBy?: InputMaybe<UserWhereInput>;
 };
 
-export enum CateghoryOrderByInput {
+export enum CategoryOrderByInput {
   CREATEDAT_ASC = 'createdAt_ASC',
   CREATEDAT_DESC = 'createdAt_DESC',
   ID_ASC = 'id_ASC',
@@ -1508,91 +1508,91 @@ export enum CateghoryOrderByInput {
   UPDATEDAT_DESC = 'updatedAt_DESC'
 }
 
-export type CateghoryUpdateInput = {
+export type CategoryUpdateInput = {
   name?: InputMaybe<Scalars['String']>;
   posts?: InputMaybe<PostUpdateManyInlineInput>;
   slug?: InputMaybe<Scalars['String']>;
 };
 
-export type CateghoryUpdateManyInlineInput = {
-  /** Connect multiple existing Categhory documents */
-  connect?: InputMaybe<Array<CateghoryConnectInput>>;
-  /** Create and connect multiple Categhory documents */
-  create?: InputMaybe<Array<CateghoryCreateInput>>;
-  /** Delete multiple Categhory documents */
-  delete?: InputMaybe<Array<CateghoryWhereUniqueInput>>;
-  /** Disconnect multiple Categhory documents */
-  disconnect?: InputMaybe<Array<CateghoryWhereUniqueInput>>;
-  /** Override currently-connected documents with multiple existing Categhory documents */
-  set?: InputMaybe<Array<CateghoryWhereUniqueInput>>;
-  /** Update multiple Categhory documents */
-  update?: InputMaybe<Array<CateghoryUpdateWithNestedWhereUniqueInput>>;
-  /** Upsert multiple Categhory documents */
-  upsert?: InputMaybe<Array<CateghoryUpsertWithNestedWhereUniqueInput>>;
+export type CategoryUpdateManyInlineInput = {
+  /** Connect multiple existing Category documents */
+  connect?: InputMaybe<Array<CategoryConnectInput>>;
+  /** Create and connect multiple Category documents */
+  create?: InputMaybe<Array<CategoryCreateInput>>;
+  /** Delete multiple Category documents */
+  delete?: InputMaybe<Array<CategoryWhereUniqueInput>>;
+  /** Disconnect multiple Category documents */
+  disconnect?: InputMaybe<Array<CategoryWhereUniqueInput>>;
+  /** Override currently-connected documents with multiple existing Category documents */
+  set?: InputMaybe<Array<CategoryWhereUniqueInput>>;
+  /** Update multiple Category documents */
+  update?: InputMaybe<Array<CategoryUpdateWithNestedWhereUniqueInput>>;
+  /** Upsert multiple Category documents */
+  upsert?: InputMaybe<Array<CategoryUpsertWithNestedWhereUniqueInput>>;
 };
 
-export type CateghoryUpdateManyInput = {
+export type CategoryUpdateManyInput = {
   /** No fields in updateMany data input */
   _?: InputMaybe<Scalars['String']>;
 };
 
-export type CateghoryUpdateManyWithNestedWhereInput = {
+export type CategoryUpdateManyWithNestedWhereInput = {
   /** Update many input */
-  data: CateghoryUpdateManyInput;
+  data: CategoryUpdateManyInput;
   /** Document search */
-  where: CateghoryWhereInput;
+  where: CategoryWhereInput;
 };
 
-export type CateghoryUpdateOneInlineInput = {
-  /** Connect existing Categhory document */
-  connect?: InputMaybe<CateghoryWhereUniqueInput>;
-  /** Create and connect one Categhory document */
-  create?: InputMaybe<CateghoryCreateInput>;
-  /** Delete currently connected Categhory document */
+export type CategoryUpdateOneInlineInput = {
+  /** Connect existing Category document */
+  connect?: InputMaybe<CategoryWhereUniqueInput>;
+  /** Create and connect one Category document */
+  create?: InputMaybe<CategoryCreateInput>;
+  /** Delete currently connected Category document */
   delete?: InputMaybe<Scalars['Boolean']>;
-  /** Disconnect currently connected Categhory document */
+  /** Disconnect currently connected Category document */
   disconnect?: InputMaybe<Scalars['Boolean']>;
-  /** Update single Categhory document */
-  update?: InputMaybe<CateghoryUpdateWithNestedWhereUniqueInput>;
-  /** Upsert single Categhory document */
-  upsert?: InputMaybe<CateghoryUpsertWithNestedWhereUniqueInput>;
+  /** Update single Category document */
+  update?: InputMaybe<CategoryUpdateWithNestedWhereUniqueInput>;
+  /** Upsert single Category document */
+  upsert?: InputMaybe<CategoryUpsertWithNestedWhereUniqueInput>;
 };
 
-export type CateghoryUpdateWithNestedWhereUniqueInput = {
+export type CategoryUpdateWithNestedWhereUniqueInput = {
   /** Document to update */
-  data: CateghoryUpdateInput;
+  data: CategoryUpdateInput;
   /** Unique document search */
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
-export type CateghoryUpsertInput = {
+export type CategoryUpsertInput = {
   /** Create document if it didn't exist */
-  create: CateghoryCreateInput;
+  create: CategoryCreateInput;
   /** Update document if it exists */
-  update: CateghoryUpdateInput;
+  update: CategoryUpdateInput;
 };
 
-export type CateghoryUpsertWithNestedWhereUniqueInput = {
+export type CategoryUpsertWithNestedWhereUniqueInput = {
   /** Upsert data */
-  data: CateghoryUpsertInput;
+  data: CategoryUpsertInput;
   /** Unique document search */
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 /** This contains a set of filters that can be used to compare values internally */
-export type CateghoryWhereComparatorInput = {
+export type CategoryWhereComparatorInput = {
   /** This field can be used to request to check if the entry is outdated by internal comparison */
   outdated_to?: InputMaybe<Scalars['Boolean']>;
 };
 
 /** Identifies documents */
-export type CateghoryWhereInput = {
+export type CategoryWhereInput = {
   /** Logical AND on all given filters. */
-  AND?: InputMaybe<Array<CateghoryWhereInput>>;
+  AND?: InputMaybe<Array<CategoryWhereInput>>;
   /** Logical NOT on all given filters combined by AND. */
-  NOT?: InputMaybe<Array<CateghoryWhereInput>>;
+  NOT?: InputMaybe<Array<CategoryWhereInput>>;
   /** Logical OR on all given filters. */
-  OR?: InputMaybe<Array<CateghoryWhereInput>>;
+  OR?: InputMaybe<Array<CategoryWhereInput>>;
   /** Contains search across all appropriate fields. */
   _search?: InputMaybe<Scalars['String']>;
   createdAt?: InputMaybe<Scalars['DateTime']>;
@@ -1611,9 +1611,9 @@ export type CateghoryWhereInput = {
   /** All values that are not contained in given list. */
   createdAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
   createdBy?: InputMaybe<UserWhereInput>;
-  documentInStages_every?: InputMaybe<CateghoryWhereStageInput>;
-  documentInStages_none?: InputMaybe<CateghoryWhereStageInput>;
-  documentInStages_some?: InputMaybe<CateghoryWhereStageInput>;
+  documentInStages_every?: InputMaybe<CategoryWhereStageInput>;
+  documentInStages_none?: InputMaybe<CategoryWhereStageInput>;
+  documentInStages_some?: InputMaybe<CategoryWhereStageInput>;
   id?: InputMaybe<Scalars['ID']>;
   /** All values containing the given string. */
   id_contains?: InputMaybe<Scalars['ID']>;
@@ -1712,21 +1712,21 @@ export type CateghoryWhereInput = {
 };
 
 /** The document in stages filter allows specifying a stage entry to cross compare the same document between different stages */
-export type CateghoryWhereStageInput = {
+export type CategoryWhereStageInput = {
   /** Logical AND on all given filters. */
-  AND?: InputMaybe<Array<CateghoryWhereStageInput>>;
+  AND?: InputMaybe<Array<CategoryWhereStageInput>>;
   /** Logical NOT on all given filters combined by AND. */
-  NOT?: InputMaybe<Array<CateghoryWhereStageInput>>;
+  NOT?: InputMaybe<Array<CategoryWhereStageInput>>;
   /** Logical OR on all given filters. */
-  OR?: InputMaybe<Array<CateghoryWhereStageInput>>;
+  OR?: InputMaybe<Array<CategoryWhereStageInput>>;
   /** This field contains fields which can be set as true or false to specify an internal comparison */
-  compareWithParent?: InputMaybe<CateghoryWhereComparatorInput>;
+  compareWithParent?: InputMaybe<CategoryWhereComparatorInput>;
   /** Specify the stage to compare with */
   stage?: InputMaybe<Stage>;
 };
 
-/** References Categhory record uniquely */
-export type CateghoryWhereUniqueInput = {
+/** References Category record uniquely */
+export type CategoryWhereUniqueInput = {
   id?: InputMaybe<Scalars['ID']>;
   name?: InputMaybe<Scalars['String']>;
   slug?: InputMaybe<Scalars['String']>;
@@ -2396,8 +2396,8 @@ export type Mutation = {
   createAsset?: Maybe<Asset>;
   /** Create one author */
   createAuthor?: Maybe<Author>;
-  /** Create one categhory */
-  createCateghory?: Maybe<Categhory>;
+  /** Create one category */
+  createCategory?: Maybe<Category>;
   /** Create one comment */
   createComment?: Maybe<Comment>;
   /** Create one post */
@@ -2408,8 +2408,8 @@ export type Mutation = {
   deleteAsset?: Maybe<Asset>;
   /** Delete one author from _all_ existing stages. Returns deleted document. */
   deleteAuthor?: Maybe<Author>;
-  /** Delete one categhory from _all_ existing stages. Returns deleted document. */
-  deleteCateghory?: Maybe<Categhory>;
+  /** Delete one category from _all_ existing stages. Returns deleted document. */
+  deleteCategory?: Maybe<Category>;
   /** Delete one comment from _all_ existing stages. Returns deleted document. */
   deleteComment?: Maybe<Comment>;
   /**
@@ -2427,12 +2427,12 @@ export type Mutation = {
   /** Delete many Author documents, return deleted documents */
   deleteManyAuthorsConnection: AuthorConnection;
   /**
-   * Delete many Categhory documents
-   * @deprecated Please use the new paginated many mutation (deleteManyCateghoriesConnection)
+   * Delete many Category documents
+   * @deprecated Please use the new paginated many mutation (deleteManyCategoriesConnection)
    */
-  deleteManyCateghories: BatchPayload;
-  /** Delete many Categhory documents, return deleted documents */
-  deleteManyCateghoriesConnection: CateghoryConnection;
+  deleteManyCategories: BatchPayload;
+  /** Delete many Category documents, return deleted documents */
+  deleteManyCategoriesConnection: CategoryConnection;
   /**
    * Delete many Comment documents
    * @deprecated Please use the new paginated many mutation (deleteManyCommentsConnection)
@@ -2457,8 +2457,8 @@ export type Mutation = {
   publishAsset?: Maybe<Asset>;
   /** Publish one author */
   publishAuthor?: Maybe<Author>;
-  /** Publish one categhory */
-  publishCateghory?: Maybe<Categhory>;
+  /** Publish one category */
+  publishCategory?: Maybe<Category>;
   /** Publish one comment */
   publishComment?: Maybe<Comment>;
   /**
@@ -2476,12 +2476,12 @@ export type Mutation = {
   /** Publish many Author documents */
   publishManyAuthorsConnection: AuthorConnection;
   /**
-   * Publish many Categhory documents
-   * @deprecated Please use the new paginated many mutation (publishManyCateghoriesConnection)
+   * Publish many Category documents
+   * @deprecated Please use the new paginated many mutation (publishManyCategoriesConnection)
    */
-  publishManyCateghories: BatchPayload;
-  /** Publish many Categhory documents */
-  publishManyCateghoriesConnection: CateghoryConnection;
+  publishManyCategories: BatchPayload;
+  /** Publish many Category documents */
+  publishManyCategoriesConnection: CategoryConnection;
   /**
    * Publish many Comment documents
    * @deprecated Please use the new paginated many mutation (publishManyCommentsConnection)
@@ -2502,8 +2502,8 @@ export type Mutation = {
   schedulePublishAsset?: Maybe<Asset>;
   /** Schedule to publish one author */
   schedulePublishAuthor?: Maybe<Author>;
-  /** Schedule to publish one categhory */
-  schedulePublishCateghory?: Maybe<Categhory>;
+  /** Schedule to publish one category */
+  schedulePublishCategory?: Maybe<Category>;
   /** Schedule to publish one comment */
   schedulePublishComment?: Maybe<Comment>;
   /** Schedule to publish one post */
@@ -2512,8 +2512,8 @@ export type Mutation = {
   scheduleUnpublishAsset?: Maybe<Asset>;
   /** Unpublish one author from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
   scheduleUnpublishAuthor?: Maybe<Author>;
-  /** Unpublish one categhory from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
-  scheduleUnpublishCateghory?: Maybe<Categhory>;
+  /** Unpublish one category from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+  scheduleUnpublishCategory?: Maybe<Category>;
   /** Unpublish one comment from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
   scheduleUnpublishComment?: Maybe<Comment>;
   /** Unpublish one post from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
@@ -2522,8 +2522,8 @@ export type Mutation = {
   unpublishAsset?: Maybe<Asset>;
   /** Unpublish one author from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
   unpublishAuthor?: Maybe<Author>;
-  /** Unpublish one categhory from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
-  unpublishCateghory?: Maybe<Categhory>;
+  /** Unpublish one category from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+  unpublishCategory?: Maybe<Category>;
   /** Unpublish one comment from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
   unpublishComment?: Maybe<Comment>;
   /**
@@ -2541,12 +2541,12 @@ export type Mutation = {
   /** Find many Author documents that match criteria in specified stage and unpublish from target stages */
   unpublishManyAuthorsConnection: AuthorConnection;
   /**
-   * Unpublish many Categhory documents
-   * @deprecated Please use the new paginated many mutation (unpublishManyCateghoriesConnection)
+   * Unpublish many Category documents
+   * @deprecated Please use the new paginated many mutation (unpublishManyCategoriesConnection)
    */
-  unpublishManyCateghories: BatchPayload;
-  /** Find many Categhory documents that match criteria in specified stage and unpublish from target stages */
-  unpublishManyCateghoriesConnection: CateghoryConnection;
+  unpublishManyCategories: BatchPayload;
+  /** Find many Category documents that match criteria in specified stage and unpublish from target stages */
+  unpublishManyCategoriesConnection: CategoryConnection;
   /**
    * Unpublish many Comment documents
    * @deprecated Please use the new paginated many mutation (unpublishManyCommentsConnection)
@@ -2567,8 +2567,8 @@ export type Mutation = {
   updateAsset?: Maybe<Asset>;
   /** Update one author */
   updateAuthor?: Maybe<Author>;
-  /** Update one categhory */
-  updateCateghory?: Maybe<Categhory>;
+  /** Update one category */
+  updateCategory?: Maybe<Category>;
   /** Update one comment */
   updateComment?: Maybe<Comment>;
   /**
@@ -2586,12 +2586,12 @@ export type Mutation = {
   /** Update many Author documents */
   updateManyAuthorsConnection: AuthorConnection;
   /**
-   * Update many categhories
-   * @deprecated Please use the new paginated many mutation (updateManyCateghoriesConnection)
+   * Update many categories
+   * @deprecated Please use the new paginated many mutation (updateManyCategoriesConnection)
    */
-  updateManyCateghories: BatchPayload;
-  /** Update many Categhory documents */
-  updateManyCateghoriesConnection: CateghoryConnection;
+  updateManyCategories: BatchPayload;
+  /** Update many Category documents */
+  updateManyCategoriesConnection: CategoryConnection;
   /**
    * Update many comments
    * @deprecated Please use the new paginated many mutation (updateManyCommentsConnection)
@@ -2614,8 +2614,8 @@ export type Mutation = {
   upsertAsset?: Maybe<Asset>;
   /** Upsert one author */
   upsertAuthor?: Maybe<Author>;
-  /** Upsert one categhory */
-  upsertCateghory?: Maybe<Categhory>;
+  /** Upsert one category */
+  upsertCategory?: Maybe<Category>;
   /** Upsert one comment */
   upsertComment?: Maybe<Comment>;
   /** Upsert one post */
@@ -2633,8 +2633,8 @@ export type MutationCreateAuthorArgs = {
 };
 
 
-export type MutationCreateCateghoryArgs = {
-  data: CateghoryCreateInput;
+export type MutationCreateCategoryArgs = {
+  data: CategoryCreateInput;
 };
 
 
@@ -2663,8 +2663,8 @@ export type MutationDeleteAuthorArgs = {
 };
 
 
-export type MutationDeleteCateghoryArgs = {
-  where: CateghoryWhereUniqueInput;
+export type MutationDeleteCategoryArgs = {
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -2703,18 +2703,18 @@ export type MutationDeleteManyAuthorsConnectionArgs = {
 };
 
 
-export type MutationDeleteManyCateghoriesArgs = {
-  where?: InputMaybe<CateghoryManyWhereInput>;
+export type MutationDeleteManyCategoriesArgs = {
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
-export type MutationDeleteManyCateghoriesConnectionArgs = {
+export type MutationDeleteManyCategoriesConnectionArgs = {
   after?: InputMaybe<Scalars['ID']>;
   before?: InputMaybe<Scalars['ID']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   skip?: InputMaybe<Scalars['Int']>;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
@@ -2778,9 +2778,9 @@ export type MutationPublishAuthorArgs = {
 };
 
 
-export type MutationPublishCateghoryArgs = {
+export type MutationPublishCategoryArgs = {
   to?: Array<Stage>;
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -2832,13 +2832,13 @@ export type MutationPublishManyAuthorsConnectionArgs = {
 };
 
 
-export type MutationPublishManyCateghoriesArgs = {
+export type MutationPublishManyCategoriesArgs = {
   to?: Array<Stage>;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
-export type MutationPublishManyCateghoriesConnectionArgs = {
+export type MutationPublishManyCategoriesConnectionArgs = {
   after?: InputMaybe<Scalars['ID']>;
   before?: InputMaybe<Scalars['ID']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -2846,7 +2846,7 @@ export type MutationPublishManyCateghoriesConnectionArgs = {
   last?: InputMaybe<Scalars['Int']>;
   skip?: InputMaybe<Scalars['Int']>;
   to?: Array<Stage>;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
@@ -2911,11 +2911,11 @@ export type MutationSchedulePublishAuthorArgs = {
 };
 
 
-export type MutationSchedulePublishCateghoryArgs = {
+export type MutationSchedulePublishCategoryArgs = {
   releaseAt?: InputMaybe<Scalars['DateTime']>;
   releaseId?: InputMaybe<Scalars['String']>;
   to?: Array<Stage>;
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -2953,11 +2953,11 @@ export type MutationScheduleUnpublishAuthorArgs = {
 };
 
 
-export type MutationScheduleUnpublishCateghoryArgs = {
+export type MutationScheduleUnpublishCategoryArgs = {
   from?: Array<Stage>;
   releaseAt?: InputMaybe<Scalars['DateTime']>;
   releaseId?: InputMaybe<Scalars['String']>;
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -2991,9 +2991,9 @@ export type MutationUnpublishAuthorArgs = {
 };
 
 
-export type MutationUnpublishCateghoryArgs = {
+export type MutationUnpublishCategoryArgs = {
   from?: Array<Stage>;
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -3043,13 +3043,13 @@ export type MutationUnpublishManyAuthorsConnectionArgs = {
 };
 
 
-export type MutationUnpublishManyCateghoriesArgs = {
+export type MutationUnpublishManyCategoriesArgs = {
   from?: Array<Stage>;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
-export type MutationUnpublishManyCateghoriesConnectionArgs = {
+export type MutationUnpublishManyCategoriesConnectionArgs = {
   after?: InputMaybe<Scalars['ID']>;
   before?: InputMaybe<Scalars['ID']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -3057,7 +3057,7 @@ export type MutationUnpublishManyCateghoriesConnectionArgs = {
   last?: InputMaybe<Scalars['Int']>;
   skip?: InputMaybe<Scalars['Int']>;
   stage?: InputMaybe<Stage>;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
@@ -3115,9 +3115,9 @@ export type MutationUpdateAuthorArgs = {
 };
 
 
-export type MutationUpdateCateghoryArgs = {
-  data: CateghoryUpdateInput;
-  where: CateghoryWhereUniqueInput;
+export type MutationUpdateCategoryArgs = {
+  data: CategoryUpdateInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -3161,20 +3161,20 @@ export type MutationUpdateManyAuthorsConnectionArgs = {
 };
 
 
-export type MutationUpdateManyCateghoriesArgs = {
-  data: CateghoryUpdateManyInput;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+export type MutationUpdateManyCategoriesArgs = {
+  data: CategoryUpdateManyInput;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
-export type MutationUpdateManyCateghoriesConnectionArgs = {
+export type MutationUpdateManyCategoriesConnectionArgs = {
   after?: InputMaybe<Scalars['ID']>;
   before?: InputMaybe<Scalars['ID']>;
-  data: CateghoryUpdateManyInput;
+  data: CategoryUpdateManyInput;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   skip?: InputMaybe<Scalars['Int']>;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
@@ -3236,9 +3236,9 @@ export type MutationUpsertAuthorArgs = {
 };
 
 
-export type MutationUpsertCateghoryArgs = {
-  upsert: CateghoryUpsertInput;
-  where: CateghoryWhereUniqueInput;
+export type MutationUpsertCategoryArgs = {
+  upsert: CategoryUpsertInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -3279,7 +3279,7 @@ export type PageInfo = {
 export type Post = Node & {
   __typename?: 'Post';
   author?: Maybe<Author>;
-  categhories: Array<Categhory>;
+  categhories: Array<Category>;
   content: PostContentRichText;
   /** The time the document was created */
   createdAt: Scalars['DateTime'];
@@ -3321,9 +3321,9 @@ export type PostCateghoriesArgs = {
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
-  orderBy?: InputMaybe<CateghoryOrderByInput>;
+  orderBy?: InputMaybe<CategoryOrderByInput>;
   skip?: InputMaybe<Scalars['Int']>;
-  where?: InputMaybe<CateghoryWhereInput>;
+  where?: InputMaybe<CategoryWhereInput>;
 };
 
 
@@ -3411,11 +3411,11 @@ export type PostContentRichTextReferencesArgs = {
   skip?: InputMaybe<Scalars['Int']>;
 };
 
-export type PostContentRichTextEmbeddedTypes = Author | Categhory;
+export type PostContentRichTextEmbeddedTypes = Author | Category;
 
 export type PostCreateInput = {
   author?: InputMaybe<AuthorCreateOneInlineInput>;
-  categhories?: InputMaybe<CateghoryCreateManyInlineInput>;
+  categhories?: InputMaybe<CategoryCreateManyInlineInput>;
   content: Scalars['RichTextAST'];
   createdAt?: InputMaybe<Scalars['DateTime']>;
   excerpt: Scalars['String'];
@@ -3460,9 +3460,9 @@ export type PostManyWhereInput = {
   /** Contains search across all appropriate fields. */
   _search?: InputMaybe<Scalars['String']>;
   author?: InputMaybe<AuthorWhereInput>;
-  categhories_every?: InputMaybe<CateghoryWhereInput>;
-  categhories_none?: InputMaybe<CateghoryWhereInput>;
-  categhories_some?: InputMaybe<CateghoryWhereInput>;
+  categhories_every?: InputMaybe<CategoryWhereInput>;
+  categhories_none?: InputMaybe<CategoryWhereInput>;
+  categhories_some?: InputMaybe<CategoryWhereInput>;
   createdAt?: InputMaybe<Scalars['DateTime']>;
   /** All values greater than the given value. */
   createdAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -3620,7 +3620,7 @@ export enum PostOrderByInput {
 
 export type PostUpdateInput = {
   author?: InputMaybe<AuthorUpdateOneInlineInput>;
-  categhories?: InputMaybe<CateghoryUpdateManyInlineInput>;
+  categhories?: InputMaybe<CategoryUpdateManyInlineInput>;
   content?: InputMaybe<Scalars['RichTextAST']>;
   excerpt?: InputMaybe<Scalars['String']>;
   featuredImage?: InputMaybe<AssetUpdateOneInlineInput>;
@@ -3713,9 +3713,9 @@ export type PostWhereInput = {
   /** Contains search across all appropriate fields. */
   _search?: InputMaybe<Scalars['String']>;
   author?: InputMaybe<AuthorWhereInput>;
-  categhories_every?: InputMaybe<CateghoryWhereInput>;
-  categhories_none?: InputMaybe<CateghoryWhereInput>;
-  categhories_some?: InputMaybe<CateghoryWhereInput>;
+  categhories_every?: InputMaybe<CategoryWhereInput>;
+  categhories_none?: InputMaybe<CategoryWhereInput>;
+  categhories_some?: InputMaybe<CategoryWhereInput>;
   createdAt?: InputMaybe<Scalars['DateTime']>;
   /** All values greater than the given value. */
   createdAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -3897,14 +3897,14 @@ export type Query = {
   authors: Array<Author>;
   /** Retrieve multiple authors using the Relay connection interface */
   authorsConnection: AuthorConnection;
-  /** Retrieve multiple categhories */
-  categhories: Array<Categhory>;
-  /** Retrieve multiple categhories using the Relay connection interface */
-  categhoriesConnection: CateghoryConnection;
-  /** Retrieve a single categhory */
-  categhory?: Maybe<Categhory>;
+  /** Retrieve multiple categories */
+  categories: Array<Category>;
+  /** Retrieve multiple categories using the Relay connection interface */
+  categoriesConnection: CategoryConnection;
+  /** Retrieve a single category */
+  category?: Maybe<Category>;
   /** Retrieve document version */
-  categhoryVersion?: Maybe<DocumentVersion>;
+  categoryVersion?: Maybe<DocumentVersion>;
   /** Retrieve a single comment */
   comment?: Maybe<Comment>;
   /** Retrieve document version */
@@ -4020,40 +4020,40 @@ export type QueryAuthorsConnectionArgs = {
 };
 
 
-export type QueryCateghoriesArgs = {
+export type QueryCategoriesArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: Array<Locale>;
-  orderBy?: InputMaybe<CateghoryOrderByInput>;
+  orderBy?: InputMaybe<CategoryOrderByInput>;
   skip?: InputMaybe<Scalars['Int']>;
   stage?: Stage;
-  where?: InputMaybe<CateghoryWhereInput>;
+  where?: InputMaybe<CategoryWhereInput>;
 };
 
 
-export type QueryCateghoriesConnectionArgs = {
+export type QueryCategoriesConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: Array<Locale>;
-  orderBy?: InputMaybe<CateghoryOrderByInput>;
+  orderBy?: InputMaybe<CategoryOrderByInput>;
   skip?: InputMaybe<Scalars['Int']>;
   stage?: Stage;
-  where?: InputMaybe<CateghoryWhereInput>;
+  where?: InputMaybe<CategoryWhereInput>;
 };
 
 
-export type QueryCateghoryArgs = {
+export type QueryCategoryArgs = {
   locales?: Array<Locale>;
   stage?: Stage;
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
-export type QueryCateghoryVersionArgs = {
+export type QueryCategoryVersionArgs = {
   where: VersionWhereInput;
 };
 
@@ -4346,7 +4346,7 @@ export type ScheduledOperationUpdatedByArgs = {
   locales?: InputMaybe<Array<Locale>>;
 };
 
-export type ScheduledOperationAffectedDocument = Asset | Author | Categhory | Comment | Post;
+export type ScheduledOperationAffectedDocument = Asset | Author | Category | Comment | Post;
 
 export type ScheduledOperationConnectInput = {
   /** Allow to specify document position in list of connected documents, will default to appending at end of list */
@@ -5765,7 +5765,7 @@ export enum SystemDateTimeFieldVariation {
 export type GetAllPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetAllPostsQuery = { __typename?: 'Query', postsConnection: { __typename?: 'PostConnection', edges: Array<{ __typename?: 'PostEdge', node: { __typename?: 'Post', createdAt: any, slug: string, title: string, excerpt: string, author?: { __typename?: 'Author', bio?: string | null, name: string, id: string, photo?: { __typename?: 'Asset', url: string } | null } | null, featuredImage: { __typename?: 'Asset', url: string }, categhories: Array<{ __typename?: 'Categhory', name: string, slug: string }> } }> } };
+export type GetAllPostsQuery = { __typename?: 'Query', postsConnection: { __typename?: 'PostConnection', edges: Array<{ __typename?: 'PostEdge', node: { __typename?: 'Post', createdAt: any, slug: string, title: string, excerpt: string, author?: { __typename?: 'Author', bio?: string | null, name: string, id: string, photo?: { __typename?: 'Asset', url: string } | null } | null, featuredImage: { __typename?: 'Asset', url: string }, categhories: Array<{ __typename?: 'Category', name: string, slug: string }> } }> } };
 
 export type GetRecentedPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -5780,10 +5780,16 @@ export type GetSimilarPostsQueryVariables = Exact<{
 
 export type GetSimilarPostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', title: string, createdAt: any, slug: string, featuredImage: { __typename?: 'Asset', url: string } }> };
 
+export type GetCategoriesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetCategoriesQuery = { __typename?: 'Query', categories: Array<{ __typename?: 'Category', name: string, slug: string }> };
+
 
 export const GetAllPostsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetAllPosts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"postsConnection"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"author"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"bio"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"photo"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"createdAt"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"excerpt"}},{"kind":"Field","name":{"kind":"Name","value":"featuredImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"categhories"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetAllPostsQuery, GetAllPostsQueryVariables>;
 export const GetRecentedPostsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetRecentedPosts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"posts"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"orderBy"},"value":{"kind":"EnumValue","value":"createdAt_ASC"}},{"kind":"Argument","name":{"kind":"Name","value":"last"},"value":{"kind":"IntValue","value":"3"}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"featuredImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"createdAt"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]} as unknown as DocumentNode<GetRecentedPostsQuery, GetRecentedPostsQueryVariables>;
 export const GetSimilarPostsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetSimilarPosts"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"categories"}},"type":{"kind":"ListType","type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"posts"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"where"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug_not"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}},{"kind":"ObjectField","name":{"kind":"Name","value":"AND"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"categhories_some"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug_in"},"value":{"kind":"Variable","name":{"kind":"Name","value":"categories"}}}]}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"featuredImage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}}]}},{"kind":"Field","name":{"kind":"Name","value":"createdAt"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]} as unknown as DocumentNode<GetSimilarPostsQuery, GetSimilarPostsQueryVariables>;
+export const GetCategoriesDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"getCategories"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"categories"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}}]}}]}}]} as unknown as DocumentNode<GetCategoriesQuery, GetCategoriesQueryVariables>;
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -7015,15 +7021,15 @@ export type BatchPayload = {
   count: Scalars['Long'];
 };
 
-export type Categhory = Node & {
-  __typename?: 'Categhory';
+export type Category = Node & {
+  __typename?: 'Category';
   /** The time the document was created */
   createdAt: Scalars['DateTime'];
   /** User that created this document */
   createdBy?: Maybe<User>;
   /** Get the document in other stages */
-  documentInStages: Array<Categhory>;
-  /** List of Categhory versions */
+  documentInStages: Array<Category>;
+  /** List of Category versions */
   history: Array<Version>;
   /** The unique identifier */
   id: Scalars['ID'];
@@ -7044,26 +7050,26 @@ export type Categhory = Node & {
 };
 
 
-export type CateghoryCreatedByArgs = {
+export type CategoryCreatedByArgs = {
   locales?: InputMaybe<Array<Locale>>;
 };
 
 
-export type CateghoryDocumentInStagesArgs = {
+export type CategoryDocumentInStagesArgs = {
   includeCurrent?: Scalars['Boolean'];
   inheritLocale?: Scalars['Boolean'];
   stages?: Array<Stage>;
 };
 
 
-export type CateghoryHistoryArgs = {
+export type CategoryHistoryArgs = {
   limit?: Scalars['Int'];
   skip?: Scalars['Int'];
   stageOverride?: InputMaybe<Stage>;
 };
 
 
-export type CateghoryPostsArgs = {
+export type CategoryPostsArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -7075,12 +7081,12 @@ export type CateghoryPostsArgs = {
 };
 
 
-export type CateghoryPublishedByArgs = {
+export type CategoryPublishedByArgs = {
   locales?: InputMaybe<Array<Locale>>;
 };
 
 
-export type CateghoryScheduledInArgs = {
+export type CategoryScheduledInArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -7091,28 +7097,28 @@ export type CateghoryScheduledInArgs = {
 };
 
 
-export type CateghoryUpdatedByArgs = {
+export type CategoryUpdatedByArgs = {
   locales?: InputMaybe<Array<Locale>>;
 };
 
-export type CateghoryConnectInput = {
+export type CategoryConnectInput = {
   /** Allow to specify document position in list of connected documents, will default to appending at end of list */
   position?: InputMaybe<ConnectPositionInput>;
   /** Document to connect */
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 /** A connection to a list of items. */
-export type CateghoryConnection = {
-  __typename?: 'CateghoryConnection';
+export type CategoryConnection = {
+  __typename?: 'CategoryConnection';
   aggregate: Aggregate;
   /** A list of edges. */
-  edges: Array<CateghoryEdge>;
+  edges: Array<CategoryEdge>;
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
 };
 
-export type CateghoryCreateInput = {
+export type CategoryCreateInput = {
   createdAt?: InputMaybe<Scalars['DateTime']>;
   name: Scalars['String'];
   posts?: InputMaybe<PostCreateManyInlineInput>;
@@ -7120,37 +7126,37 @@ export type CateghoryCreateInput = {
   updatedAt?: InputMaybe<Scalars['DateTime']>;
 };
 
-export type CateghoryCreateManyInlineInput = {
-  /** Connect multiple existing Categhory documents */
-  connect?: InputMaybe<Array<CateghoryWhereUniqueInput>>;
-  /** Create and connect multiple existing Categhory documents */
-  create?: InputMaybe<Array<CateghoryCreateInput>>;
+export type CategoryCreateManyInlineInput = {
+  /** Connect multiple existing Category documents */
+  connect?: InputMaybe<Array<CategoryWhereUniqueInput>>;
+  /** Create and connect multiple existing Category documents */
+  create?: InputMaybe<Array<CategoryCreateInput>>;
 };
 
-export type CateghoryCreateOneInlineInput = {
-  /** Connect one existing Categhory document */
-  connect?: InputMaybe<CateghoryWhereUniqueInput>;
-  /** Create and connect one Categhory document */
-  create?: InputMaybe<CateghoryCreateInput>;
+export type CategoryCreateOneInlineInput = {
+  /** Connect one existing Category document */
+  connect?: InputMaybe<CategoryWhereUniqueInput>;
+  /** Create and connect one Category document */
+  create?: InputMaybe<CategoryCreateInput>;
 };
 
 /** An edge in a connection. */
-export type CateghoryEdge = {
-  __typename?: 'CateghoryEdge';
+export type CategoryEdge = {
+  __typename?: 'CategoryEdge';
   /** A cursor for use in pagination. */
   cursor: Scalars['String'];
   /** The item at the end of the edge. */
-  node: Categhory;
+  node: Category;
 };
 
 /** Identifies documents */
-export type CateghoryManyWhereInput = {
+export type CategoryManyWhereInput = {
   /** Logical AND on all given filters. */
-  AND?: InputMaybe<Array<CateghoryWhereInput>>;
+  AND?: InputMaybe<Array<CategoryWhereInput>>;
   /** Logical NOT on all given filters combined by AND. */
-  NOT?: InputMaybe<Array<CateghoryWhereInput>>;
+  NOT?: InputMaybe<Array<CategoryWhereInput>>;
   /** Logical OR on all given filters. */
-  OR?: InputMaybe<Array<CateghoryWhereInput>>;
+  OR?: InputMaybe<Array<CategoryWhereInput>>;
   /** Contains search across all appropriate fields. */
   _search?: InputMaybe<Scalars['String']>;
   createdAt?: InputMaybe<Scalars['DateTime']>;
@@ -7169,9 +7175,9 @@ export type CateghoryManyWhereInput = {
   /** All values that are not contained in given list. */
   createdAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
   createdBy?: InputMaybe<UserWhereInput>;
-  documentInStages_every?: InputMaybe<CateghoryWhereStageInput>;
-  documentInStages_none?: InputMaybe<CateghoryWhereStageInput>;
-  documentInStages_some?: InputMaybe<CateghoryWhereStageInput>;
+  documentInStages_every?: InputMaybe<CategoryWhereStageInput>;
+  documentInStages_none?: InputMaybe<CategoryWhereStageInput>;
+  documentInStages_some?: InputMaybe<CategoryWhereStageInput>;
   id?: InputMaybe<Scalars['ID']>;
   /** All values containing the given string. */
   id_contains?: InputMaybe<Scalars['ID']>;
@@ -7269,7 +7275,7 @@ export type CateghoryManyWhereInput = {
   updatedBy?: InputMaybe<UserWhereInput>;
 };
 
-export enum CateghoryOrderByInput {
+export enum CategoryOrderByInput {
   CREATEDAT_ASC = 'createdAt_ASC',
   CREATEDAT_DESC = 'createdAt_DESC',
   ID_ASC = 'id_ASC',
@@ -7284,91 +7290,91 @@ export enum CateghoryOrderByInput {
   UPDATEDAT_DESC = 'updatedAt_DESC'
 }
 
-export type CateghoryUpdateInput = {
+export type CategoryUpdateInput = {
   name?: InputMaybe<Scalars['String']>;
   posts?: InputMaybe<PostUpdateManyInlineInput>;
   slug?: InputMaybe<Scalars['String']>;
 };
 
-export type CateghoryUpdateManyInlineInput = {
-  /** Connect multiple existing Categhory documents */
-  connect?: InputMaybe<Array<CateghoryConnectInput>>;
-  /** Create and connect multiple Categhory documents */
-  create?: InputMaybe<Array<CateghoryCreateInput>>;
-  /** Delete multiple Categhory documents */
-  delete?: InputMaybe<Array<CateghoryWhereUniqueInput>>;
-  /** Disconnect multiple Categhory documents */
-  disconnect?: InputMaybe<Array<CateghoryWhereUniqueInput>>;
-  /** Override currently-connected documents with multiple existing Categhory documents */
-  set?: InputMaybe<Array<CateghoryWhereUniqueInput>>;
-  /** Update multiple Categhory documents */
-  update?: InputMaybe<Array<CateghoryUpdateWithNestedWhereUniqueInput>>;
-  /** Upsert multiple Categhory documents */
-  upsert?: InputMaybe<Array<CateghoryUpsertWithNestedWhereUniqueInput>>;
+export type CategoryUpdateManyInlineInput = {
+  /** Connect multiple existing Category documents */
+  connect?: InputMaybe<Array<CategoryConnectInput>>;
+  /** Create and connect multiple Category documents */
+  create?: InputMaybe<Array<CategoryCreateInput>>;
+  /** Delete multiple Category documents */
+  delete?: InputMaybe<Array<CategoryWhereUniqueInput>>;
+  /** Disconnect multiple Category documents */
+  disconnect?: InputMaybe<Array<CategoryWhereUniqueInput>>;
+  /** Override currently-connected documents with multiple existing Category documents */
+  set?: InputMaybe<Array<CategoryWhereUniqueInput>>;
+  /** Update multiple Category documents */
+  update?: InputMaybe<Array<CategoryUpdateWithNestedWhereUniqueInput>>;
+  /** Upsert multiple Category documents */
+  upsert?: InputMaybe<Array<CategoryUpsertWithNestedWhereUniqueInput>>;
 };
 
-export type CateghoryUpdateManyInput = {
+export type CategoryUpdateManyInput = {
   /** No fields in updateMany data input */
   _?: InputMaybe<Scalars['String']>;
 };
 
-export type CateghoryUpdateManyWithNestedWhereInput = {
+export type CategoryUpdateManyWithNestedWhereInput = {
   /** Update many input */
-  data: CateghoryUpdateManyInput;
+  data: CategoryUpdateManyInput;
   /** Document search */
-  where: CateghoryWhereInput;
+  where: CategoryWhereInput;
 };
 
-export type CateghoryUpdateOneInlineInput = {
-  /** Connect existing Categhory document */
-  connect?: InputMaybe<CateghoryWhereUniqueInput>;
-  /** Create and connect one Categhory document */
-  create?: InputMaybe<CateghoryCreateInput>;
-  /** Delete currently connected Categhory document */
+export type CategoryUpdateOneInlineInput = {
+  /** Connect existing Category document */
+  connect?: InputMaybe<CategoryWhereUniqueInput>;
+  /** Create and connect one Category document */
+  create?: InputMaybe<CategoryCreateInput>;
+  /** Delete currently connected Category document */
   delete?: InputMaybe<Scalars['Boolean']>;
-  /** Disconnect currently connected Categhory document */
+  /** Disconnect currently connected Category document */
   disconnect?: InputMaybe<Scalars['Boolean']>;
-  /** Update single Categhory document */
-  update?: InputMaybe<CateghoryUpdateWithNestedWhereUniqueInput>;
-  /** Upsert single Categhory document */
-  upsert?: InputMaybe<CateghoryUpsertWithNestedWhereUniqueInput>;
+  /** Update single Category document */
+  update?: InputMaybe<CategoryUpdateWithNestedWhereUniqueInput>;
+  /** Upsert single Category document */
+  upsert?: InputMaybe<CategoryUpsertWithNestedWhereUniqueInput>;
 };
 
-export type CateghoryUpdateWithNestedWhereUniqueInput = {
+export type CategoryUpdateWithNestedWhereUniqueInput = {
   /** Document to update */
-  data: CateghoryUpdateInput;
+  data: CategoryUpdateInput;
   /** Unique document search */
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
-export type CateghoryUpsertInput = {
+export type CategoryUpsertInput = {
   /** Create document if it didn't exist */
-  create: CateghoryCreateInput;
+  create: CategoryCreateInput;
   /** Update document if it exists */
-  update: CateghoryUpdateInput;
+  update: CategoryUpdateInput;
 };
 
-export type CateghoryUpsertWithNestedWhereUniqueInput = {
+export type CategoryUpsertWithNestedWhereUniqueInput = {
   /** Upsert data */
-  data: CateghoryUpsertInput;
+  data: CategoryUpsertInput;
   /** Unique document search */
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 /** This contains a set of filters that can be used to compare values internally */
-export type CateghoryWhereComparatorInput = {
+export type CategoryWhereComparatorInput = {
   /** This field can be used to request to check if the entry is outdated by internal comparison */
   outdated_to?: InputMaybe<Scalars['Boolean']>;
 };
 
 /** Identifies documents */
-export type CateghoryWhereInput = {
+export type CategoryWhereInput = {
   /** Logical AND on all given filters. */
-  AND?: InputMaybe<Array<CateghoryWhereInput>>;
+  AND?: InputMaybe<Array<CategoryWhereInput>>;
   /** Logical NOT on all given filters combined by AND. */
-  NOT?: InputMaybe<Array<CateghoryWhereInput>>;
+  NOT?: InputMaybe<Array<CategoryWhereInput>>;
   /** Logical OR on all given filters. */
-  OR?: InputMaybe<Array<CateghoryWhereInput>>;
+  OR?: InputMaybe<Array<CategoryWhereInput>>;
   /** Contains search across all appropriate fields. */
   _search?: InputMaybe<Scalars['String']>;
   createdAt?: InputMaybe<Scalars['DateTime']>;
@@ -7387,9 +7393,9 @@ export type CateghoryWhereInput = {
   /** All values that are not contained in given list. */
   createdAt_not_in?: InputMaybe<Array<InputMaybe<Scalars['DateTime']>>>;
   createdBy?: InputMaybe<UserWhereInput>;
-  documentInStages_every?: InputMaybe<CateghoryWhereStageInput>;
-  documentInStages_none?: InputMaybe<CateghoryWhereStageInput>;
-  documentInStages_some?: InputMaybe<CateghoryWhereStageInput>;
+  documentInStages_every?: InputMaybe<CategoryWhereStageInput>;
+  documentInStages_none?: InputMaybe<CategoryWhereStageInput>;
+  documentInStages_some?: InputMaybe<CategoryWhereStageInput>;
   id?: InputMaybe<Scalars['ID']>;
   /** All values containing the given string. */
   id_contains?: InputMaybe<Scalars['ID']>;
@@ -7488,21 +7494,21 @@ export type CateghoryWhereInput = {
 };
 
 /** The document in stages filter allows specifying a stage entry to cross compare the same document between different stages */
-export type CateghoryWhereStageInput = {
+export type CategoryWhereStageInput = {
   /** Logical AND on all given filters. */
-  AND?: InputMaybe<Array<CateghoryWhereStageInput>>;
+  AND?: InputMaybe<Array<CategoryWhereStageInput>>;
   /** Logical NOT on all given filters combined by AND. */
-  NOT?: InputMaybe<Array<CateghoryWhereStageInput>>;
+  NOT?: InputMaybe<Array<CategoryWhereStageInput>>;
   /** Logical OR on all given filters. */
-  OR?: InputMaybe<Array<CateghoryWhereStageInput>>;
+  OR?: InputMaybe<Array<CategoryWhereStageInput>>;
   /** This field contains fields which can be set as true or false to specify an internal comparison */
-  compareWithParent?: InputMaybe<CateghoryWhereComparatorInput>;
+  compareWithParent?: InputMaybe<CategoryWhereComparatorInput>;
   /** Specify the stage to compare with */
   stage?: InputMaybe<Stage>;
 };
 
-/** References Categhory record uniquely */
-export type CateghoryWhereUniqueInput = {
+/** References Category record uniquely */
+export type CategoryWhereUniqueInput = {
   id?: InputMaybe<Scalars['ID']>;
   name?: InputMaybe<Scalars['String']>;
   slug?: InputMaybe<Scalars['String']>;
@@ -8172,8 +8178,8 @@ export type Mutation = {
   createAsset?: Maybe<Asset>;
   /** Create one author */
   createAuthor?: Maybe<Author>;
-  /** Create one categhory */
-  createCateghory?: Maybe<Categhory>;
+  /** Create one category */
+  createCategory?: Maybe<Category>;
   /** Create one comment */
   createComment?: Maybe<Comment>;
   /** Create one post */
@@ -8184,8 +8190,8 @@ export type Mutation = {
   deleteAsset?: Maybe<Asset>;
   /** Delete one author from _all_ existing stages. Returns deleted document. */
   deleteAuthor?: Maybe<Author>;
-  /** Delete one categhory from _all_ existing stages. Returns deleted document. */
-  deleteCateghory?: Maybe<Categhory>;
+  /** Delete one category from _all_ existing stages. Returns deleted document. */
+  deleteCategory?: Maybe<Category>;
   /** Delete one comment from _all_ existing stages. Returns deleted document. */
   deleteComment?: Maybe<Comment>;
   /**
@@ -8203,12 +8209,12 @@ export type Mutation = {
   /** Delete many Author documents, return deleted documents */
   deleteManyAuthorsConnection: AuthorConnection;
   /**
-   * Delete many Categhory documents
-   * @deprecated Please use the new paginated many mutation (deleteManyCateghoriesConnection)
+   * Delete many Category documents
+   * @deprecated Please use the new paginated many mutation (deleteManyCategoriesConnection)
    */
-  deleteManyCateghories: BatchPayload;
-  /** Delete many Categhory documents, return deleted documents */
-  deleteManyCateghoriesConnection: CateghoryConnection;
+  deleteManyCategories: BatchPayload;
+  /** Delete many Category documents, return deleted documents */
+  deleteManyCategoriesConnection: CategoryConnection;
   /**
    * Delete many Comment documents
    * @deprecated Please use the new paginated many mutation (deleteManyCommentsConnection)
@@ -8233,8 +8239,8 @@ export type Mutation = {
   publishAsset?: Maybe<Asset>;
   /** Publish one author */
   publishAuthor?: Maybe<Author>;
-  /** Publish one categhory */
-  publishCateghory?: Maybe<Categhory>;
+  /** Publish one category */
+  publishCategory?: Maybe<Category>;
   /** Publish one comment */
   publishComment?: Maybe<Comment>;
   /**
@@ -8252,12 +8258,12 @@ export type Mutation = {
   /** Publish many Author documents */
   publishManyAuthorsConnection: AuthorConnection;
   /**
-   * Publish many Categhory documents
-   * @deprecated Please use the new paginated many mutation (publishManyCateghoriesConnection)
+   * Publish many Category documents
+   * @deprecated Please use the new paginated many mutation (publishManyCategoriesConnection)
    */
-  publishManyCateghories: BatchPayload;
-  /** Publish many Categhory documents */
-  publishManyCateghoriesConnection: CateghoryConnection;
+  publishManyCategories: BatchPayload;
+  /** Publish many Category documents */
+  publishManyCategoriesConnection: CategoryConnection;
   /**
    * Publish many Comment documents
    * @deprecated Please use the new paginated many mutation (publishManyCommentsConnection)
@@ -8278,8 +8284,8 @@ export type Mutation = {
   schedulePublishAsset?: Maybe<Asset>;
   /** Schedule to publish one author */
   schedulePublishAuthor?: Maybe<Author>;
-  /** Schedule to publish one categhory */
-  schedulePublishCateghory?: Maybe<Categhory>;
+  /** Schedule to publish one category */
+  schedulePublishCategory?: Maybe<Category>;
   /** Schedule to publish one comment */
   schedulePublishComment?: Maybe<Comment>;
   /** Schedule to publish one post */
@@ -8288,8 +8294,8 @@ export type Mutation = {
   scheduleUnpublishAsset?: Maybe<Asset>;
   /** Unpublish one author from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
   scheduleUnpublishAuthor?: Maybe<Author>;
-  /** Unpublish one categhory from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
-  scheduleUnpublishCateghory?: Maybe<Categhory>;
+  /** Unpublish one category from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+  scheduleUnpublishCategory?: Maybe<Category>;
   /** Unpublish one comment from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
   scheduleUnpublishComment?: Maybe<Comment>;
   /** Unpublish one post from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
@@ -8298,8 +8304,8 @@ export type Mutation = {
   unpublishAsset?: Maybe<Asset>;
   /** Unpublish one author from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
   unpublishAuthor?: Maybe<Author>;
-  /** Unpublish one categhory from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
-  unpublishCateghory?: Maybe<Categhory>;
+  /** Unpublish one category from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
+  unpublishCategory?: Maybe<Category>;
   /** Unpublish one comment from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only. */
   unpublishComment?: Maybe<Comment>;
   /**
@@ -8317,12 +8323,12 @@ export type Mutation = {
   /** Find many Author documents that match criteria in specified stage and unpublish from target stages */
   unpublishManyAuthorsConnection: AuthorConnection;
   /**
-   * Unpublish many Categhory documents
-   * @deprecated Please use the new paginated many mutation (unpublishManyCateghoriesConnection)
+   * Unpublish many Category documents
+   * @deprecated Please use the new paginated many mutation (unpublishManyCategoriesConnection)
    */
-  unpublishManyCateghories: BatchPayload;
-  /** Find many Categhory documents that match criteria in specified stage and unpublish from target stages */
-  unpublishManyCateghoriesConnection: CateghoryConnection;
+  unpublishManyCategories: BatchPayload;
+  /** Find many Category documents that match criteria in specified stage and unpublish from target stages */
+  unpublishManyCategoriesConnection: CategoryConnection;
   /**
    * Unpublish many Comment documents
    * @deprecated Please use the new paginated many mutation (unpublishManyCommentsConnection)
@@ -8343,8 +8349,8 @@ export type Mutation = {
   updateAsset?: Maybe<Asset>;
   /** Update one author */
   updateAuthor?: Maybe<Author>;
-  /** Update one categhory */
-  updateCateghory?: Maybe<Categhory>;
+  /** Update one category */
+  updateCategory?: Maybe<Category>;
   /** Update one comment */
   updateComment?: Maybe<Comment>;
   /**
@@ -8362,12 +8368,12 @@ export type Mutation = {
   /** Update many Author documents */
   updateManyAuthorsConnection: AuthorConnection;
   /**
-   * Update many categhories
-   * @deprecated Please use the new paginated many mutation (updateManyCateghoriesConnection)
+   * Update many categories
+   * @deprecated Please use the new paginated many mutation (updateManyCategoriesConnection)
    */
-  updateManyCateghories: BatchPayload;
-  /** Update many Categhory documents */
-  updateManyCateghoriesConnection: CateghoryConnection;
+  updateManyCategories: BatchPayload;
+  /** Update many Category documents */
+  updateManyCategoriesConnection: CategoryConnection;
   /**
    * Update many comments
    * @deprecated Please use the new paginated many mutation (updateManyCommentsConnection)
@@ -8390,8 +8396,8 @@ export type Mutation = {
   upsertAsset?: Maybe<Asset>;
   /** Upsert one author */
   upsertAuthor?: Maybe<Author>;
-  /** Upsert one categhory */
-  upsertCateghory?: Maybe<Categhory>;
+  /** Upsert one category */
+  upsertCategory?: Maybe<Category>;
   /** Upsert one comment */
   upsertComment?: Maybe<Comment>;
   /** Upsert one post */
@@ -8409,8 +8415,8 @@ export type MutationCreateAuthorArgs = {
 };
 
 
-export type MutationCreateCateghoryArgs = {
-  data: CateghoryCreateInput;
+export type MutationCreateCategoryArgs = {
+  data: CategoryCreateInput;
 };
 
 
@@ -8439,8 +8445,8 @@ export type MutationDeleteAuthorArgs = {
 };
 
 
-export type MutationDeleteCateghoryArgs = {
-  where: CateghoryWhereUniqueInput;
+export type MutationDeleteCategoryArgs = {
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -8479,18 +8485,18 @@ export type MutationDeleteManyAuthorsConnectionArgs = {
 };
 
 
-export type MutationDeleteManyCateghoriesArgs = {
-  where?: InputMaybe<CateghoryManyWhereInput>;
+export type MutationDeleteManyCategoriesArgs = {
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
-export type MutationDeleteManyCateghoriesConnectionArgs = {
+export type MutationDeleteManyCategoriesConnectionArgs = {
   after?: InputMaybe<Scalars['ID']>;
   before?: InputMaybe<Scalars['ID']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   skip?: InputMaybe<Scalars['Int']>;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
@@ -8554,9 +8560,9 @@ export type MutationPublishAuthorArgs = {
 };
 
 
-export type MutationPublishCateghoryArgs = {
+export type MutationPublishCategoryArgs = {
   to?: Array<Stage>;
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -8608,13 +8614,13 @@ export type MutationPublishManyAuthorsConnectionArgs = {
 };
 
 
-export type MutationPublishManyCateghoriesArgs = {
+export type MutationPublishManyCategoriesArgs = {
   to?: Array<Stage>;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
-export type MutationPublishManyCateghoriesConnectionArgs = {
+export type MutationPublishManyCategoriesConnectionArgs = {
   after?: InputMaybe<Scalars['ID']>;
   before?: InputMaybe<Scalars['ID']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -8622,7 +8628,7 @@ export type MutationPublishManyCateghoriesConnectionArgs = {
   last?: InputMaybe<Scalars['Int']>;
   skip?: InputMaybe<Scalars['Int']>;
   to?: Array<Stage>;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
@@ -8687,11 +8693,11 @@ export type MutationSchedulePublishAuthorArgs = {
 };
 
 
-export type MutationSchedulePublishCateghoryArgs = {
+export type MutationSchedulePublishCategoryArgs = {
   releaseAt?: InputMaybe<Scalars['DateTime']>;
   releaseId?: InputMaybe<Scalars['String']>;
   to?: Array<Stage>;
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -8729,11 +8735,11 @@ export type MutationScheduleUnpublishAuthorArgs = {
 };
 
 
-export type MutationScheduleUnpublishCateghoryArgs = {
+export type MutationScheduleUnpublishCategoryArgs = {
   from?: Array<Stage>;
   releaseAt?: InputMaybe<Scalars['DateTime']>;
   releaseId?: InputMaybe<Scalars['String']>;
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -8767,9 +8773,9 @@ export type MutationUnpublishAuthorArgs = {
 };
 
 
-export type MutationUnpublishCateghoryArgs = {
+export type MutationUnpublishCategoryArgs = {
   from?: Array<Stage>;
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -8819,13 +8825,13 @@ export type MutationUnpublishManyAuthorsConnectionArgs = {
 };
 
 
-export type MutationUnpublishManyCateghoriesArgs = {
+export type MutationUnpublishManyCategoriesArgs = {
   from?: Array<Stage>;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
-export type MutationUnpublishManyCateghoriesConnectionArgs = {
+export type MutationUnpublishManyCategoriesConnectionArgs = {
   after?: InputMaybe<Scalars['ID']>;
   before?: InputMaybe<Scalars['ID']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -8833,7 +8839,7 @@ export type MutationUnpublishManyCateghoriesConnectionArgs = {
   last?: InputMaybe<Scalars['Int']>;
   skip?: InputMaybe<Scalars['Int']>;
   stage?: InputMaybe<Stage>;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
@@ -8891,9 +8897,9 @@ export type MutationUpdateAuthorArgs = {
 };
 
 
-export type MutationUpdateCateghoryArgs = {
-  data: CateghoryUpdateInput;
-  where: CateghoryWhereUniqueInput;
+export type MutationUpdateCategoryArgs = {
+  data: CategoryUpdateInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -8937,20 +8943,20 @@ export type MutationUpdateManyAuthorsConnectionArgs = {
 };
 
 
-export type MutationUpdateManyCateghoriesArgs = {
-  data: CateghoryUpdateManyInput;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+export type MutationUpdateManyCategoriesArgs = {
+  data: CategoryUpdateManyInput;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
-export type MutationUpdateManyCateghoriesConnectionArgs = {
+export type MutationUpdateManyCategoriesConnectionArgs = {
   after?: InputMaybe<Scalars['ID']>;
   before?: InputMaybe<Scalars['ID']>;
-  data: CateghoryUpdateManyInput;
+  data: CategoryUpdateManyInput;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   skip?: InputMaybe<Scalars['Int']>;
-  where?: InputMaybe<CateghoryManyWhereInput>;
+  where?: InputMaybe<CategoryManyWhereInput>;
 };
 
 
@@ -9012,9 +9018,9 @@ export type MutationUpsertAuthorArgs = {
 };
 
 
-export type MutationUpsertCateghoryArgs = {
-  upsert: CateghoryUpsertInput;
-  where: CateghoryWhereUniqueInput;
+export type MutationUpsertCategoryArgs = {
+  upsert: CategoryUpsertInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
@@ -9055,7 +9061,7 @@ export type PageInfo = {
 export type Post = Node & {
   __typename?: 'Post';
   author?: Maybe<Author>;
-  categhories: Array<Categhory>;
+  categhories: Array<Category>;
   content: PostContentRichText;
   /** The time the document was created */
   createdAt: Scalars['DateTime'];
@@ -9097,9 +9103,9 @@ export type PostCateghoriesArgs = {
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: InputMaybe<Array<Locale>>;
-  orderBy?: InputMaybe<CateghoryOrderByInput>;
+  orderBy?: InputMaybe<CategoryOrderByInput>;
   skip?: InputMaybe<Scalars['Int']>;
-  where?: InputMaybe<CateghoryWhereInput>;
+  where?: InputMaybe<CategoryWhereInput>;
 };
 
 
@@ -9187,11 +9193,11 @@ export type PostContentRichTextReferencesArgs = {
   skip?: InputMaybe<Scalars['Int']>;
 };
 
-export type PostContentRichTextEmbeddedTypes = Author | Categhory;
+export type PostContentRichTextEmbeddedTypes = Author | Category;
 
 export type PostCreateInput = {
   author?: InputMaybe<AuthorCreateOneInlineInput>;
-  categhories?: InputMaybe<CateghoryCreateManyInlineInput>;
+  categhories?: InputMaybe<CategoryCreateManyInlineInput>;
   content: Scalars['RichTextAST'];
   createdAt?: InputMaybe<Scalars['DateTime']>;
   excerpt: Scalars['String'];
@@ -9236,9 +9242,9 @@ export type PostManyWhereInput = {
   /** Contains search across all appropriate fields. */
   _search?: InputMaybe<Scalars['String']>;
   author?: InputMaybe<AuthorWhereInput>;
-  categhories_every?: InputMaybe<CateghoryWhereInput>;
-  categhories_none?: InputMaybe<CateghoryWhereInput>;
-  categhories_some?: InputMaybe<CateghoryWhereInput>;
+  categhories_every?: InputMaybe<CategoryWhereInput>;
+  categhories_none?: InputMaybe<CategoryWhereInput>;
+  categhories_some?: InputMaybe<CategoryWhereInput>;
   createdAt?: InputMaybe<Scalars['DateTime']>;
   /** All values greater than the given value. */
   createdAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -9396,7 +9402,7 @@ export enum PostOrderByInput {
 
 export type PostUpdateInput = {
   author?: InputMaybe<AuthorUpdateOneInlineInput>;
-  categhories?: InputMaybe<CateghoryUpdateManyInlineInput>;
+  categhories?: InputMaybe<CategoryUpdateManyInlineInput>;
   content?: InputMaybe<Scalars['RichTextAST']>;
   excerpt?: InputMaybe<Scalars['String']>;
   featuredImage?: InputMaybe<AssetUpdateOneInlineInput>;
@@ -9489,9 +9495,9 @@ export type PostWhereInput = {
   /** Contains search across all appropriate fields. */
   _search?: InputMaybe<Scalars['String']>;
   author?: InputMaybe<AuthorWhereInput>;
-  categhories_every?: InputMaybe<CateghoryWhereInput>;
-  categhories_none?: InputMaybe<CateghoryWhereInput>;
-  categhories_some?: InputMaybe<CateghoryWhereInput>;
+  categhories_every?: InputMaybe<CategoryWhereInput>;
+  categhories_none?: InputMaybe<CategoryWhereInput>;
+  categhories_some?: InputMaybe<CategoryWhereInput>;
   createdAt?: InputMaybe<Scalars['DateTime']>;
   /** All values greater than the given value. */
   createdAt_gt?: InputMaybe<Scalars['DateTime']>;
@@ -9673,14 +9679,14 @@ export type Query = {
   authors: Array<Author>;
   /** Retrieve multiple authors using the Relay connection interface */
   authorsConnection: AuthorConnection;
-  /** Retrieve multiple categhories */
-  categhories: Array<Categhory>;
-  /** Retrieve multiple categhories using the Relay connection interface */
-  categhoriesConnection: CateghoryConnection;
-  /** Retrieve a single categhory */
-  categhory?: Maybe<Categhory>;
+  /** Retrieve multiple categories */
+  categories: Array<Category>;
+  /** Retrieve multiple categories using the Relay connection interface */
+  categoriesConnection: CategoryConnection;
+  /** Retrieve a single category */
+  category?: Maybe<Category>;
   /** Retrieve document version */
-  categhoryVersion?: Maybe<DocumentVersion>;
+  categoryVersion?: Maybe<DocumentVersion>;
   /** Retrieve a single comment */
   comment?: Maybe<Comment>;
   /** Retrieve document version */
@@ -9796,40 +9802,40 @@ export type QueryAuthorsConnectionArgs = {
 };
 
 
-export type QueryCateghoriesArgs = {
+export type QueryCategoriesArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: Array<Locale>;
-  orderBy?: InputMaybe<CateghoryOrderByInput>;
+  orderBy?: InputMaybe<CategoryOrderByInput>;
   skip?: InputMaybe<Scalars['Int']>;
   stage?: Stage;
-  where?: InputMaybe<CateghoryWhereInput>;
+  where?: InputMaybe<CategoryWhereInput>;
 };
 
 
-export type QueryCateghoriesConnectionArgs = {
+export type QueryCategoriesConnectionArgs = {
   after?: InputMaybe<Scalars['String']>;
   before?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
   last?: InputMaybe<Scalars['Int']>;
   locales?: Array<Locale>;
-  orderBy?: InputMaybe<CateghoryOrderByInput>;
+  orderBy?: InputMaybe<CategoryOrderByInput>;
   skip?: InputMaybe<Scalars['Int']>;
   stage?: Stage;
-  where?: InputMaybe<CateghoryWhereInput>;
+  where?: InputMaybe<CategoryWhereInput>;
 };
 
 
-export type QueryCateghoryArgs = {
+export type QueryCategoryArgs = {
   locales?: Array<Locale>;
   stage?: Stage;
-  where: CateghoryWhereUniqueInput;
+  where: CategoryWhereUniqueInput;
 };
 
 
-export type QueryCateghoryVersionArgs = {
+export type QueryCategoryVersionArgs = {
   where: VersionWhereInput;
 };
 
@@ -10122,7 +10128,7 @@ export type ScheduledOperationUpdatedByArgs = {
   locales?: InputMaybe<Array<Locale>>;
 };
 
-export type ScheduledOperationAffectedDocument = Asset | Author | Categhory | Comment | Post;
+export type ScheduledOperationAffectedDocument = Asset | Author | Category | Comment | Post;
 
 export type ScheduledOperationConnectInput = {
   /** Allow to specify document position in list of connected documents, will default to appending at end of list */
@@ -11541,7 +11547,7 @@ export enum SystemDateTimeFieldVariation {
 export type GetAllPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetAllPostsQuery = { __typename?: 'Query', postsConnection: { __typename?: 'PostConnection', edges: Array<{ __typename?: 'PostEdge', node: { __typename?: 'Post', createdAt: any, slug: string, title: string, excerpt: string, author?: { __typename?: 'Author', bio?: string | null, name: string, id: string, photo?: { __typename?: 'Asset', url: string } | null } | null, featuredImage: { __typename?: 'Asset', url: string }, categhories: Array<{ __typename?: 'Categhory', name: string, slug: string }> } }> } };
+export type GetAllPostsQuery = { __typename?: 'Query', postsConnection: { __typename?: 'PostConnection', edges: Array<{ __typename?: 'PostEdge', node: { __typename?: 'Post', createdAt: any, slug: string, title: string, excerpt: string, author?: { __typename?: 'Author', bio?: string | null, name: string, id: string, photo?: { __typename?: 'Asset', url: string } | null } | null, featuredImage: { __typename?: 'Asset', url: string }, categhories: Array<{ __typename?: 'Category', name: string, slug: string }> } }> } };
 
 export type GetRecentedPostsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -11555,6 +11561,11 @@ export type GetSimilarPostsQueryVariables = Exact<{
 
 
 export type GetSimilarPostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', title: string, createdAt: any, slug: string, featuredImage: { __typename?: 'Asset', url: string } }> };
+
+export type GetCategoriesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetCategoriesQuery = { __typename?: 'Query', categories: Array<{ __typename?: 'Category', name: string, slug: string }> };
 
 
 export const GetAllPostsDocument = gql`
@@ -11693,3 +11704,38 @@ export function useGetSimilarPostsLazyQuery(baseOptions?: Apollo.LazyQueryHookOp
 export type GetSimilarPostsQueryHookResult = ReturnType<typeof useGetSimilarPostsQuery>;
 export type GetSimilarPostsLazyQueryHookResult = ReturnType<typeof useGetSimilarPostsLazyQuery>;
 export type GetSimilarPostsQueryResult = Apollo.QueryResult<GetSimilarPostsQuery, GetSimilarPostsQueryVariables>;
+export const GetCategoriesDocument = gql`
+    query getCategories {
+  categories {
+    name
+    slug
+  }
+}
+    `;
+
+/**
+ * __useGetCategoriesQuery__
+ *
+ * To run a query within a React component, call `useGetCategoriesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetCategoriesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetCategoriesQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetCategoriesQuery(baseOptions?: Apollo.QueryHookOptions<GetCategoriesQuery, GetCategoriesQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetCategoriesQuery, GetCategoriesQueryVariables>(GetCategoriesDocument, options);
+      }
+export function useGetCategoriesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetCategoriesQuery, GetCategoriesQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetCategoriesQuery, GetCategoriesQueryVariables>(GetCategoriesDocument, options);
+        }
+export type GetCategoriesQueryHookResult = ReturnType<typeof useGetCategoriesQuery>;
+export type GetCategoriesLazyQueryHookResult = ReturnType<typeof useGetCategoriesLazyQuery>;
+export type GetCategoriesQueryResult = Apollo.QueryResult<GetCategoriesQuery, GetCategoriesQueryVariables>;

@@ -8622,7 +8622,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "Categhory",
+        "name": "Category",
         "description": null,
         "fields": [
           {
@@ -8746,7 +8746,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "Categhory",
+                    "name": "Category",
                     "ofType": null
                   }
                 }
@@ -8757,7 +8757,7 @@
           },
           {
             "name": "history",
-            "description": "List of Categhory versions",
+            "description": "List of Category versions",
             "args": [
               {
                 "name": "limit",
@@ -9242,7 +9242,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryConnectInput",
+        "name": "CategoryConnectInput",
         "description": null,
         "fields": null,
         "inputFields": [
@@ -9266,7 +9266,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "CateghoryWhereUniqueInput",
+                "name": "CategoryWhereUniqueInput",
                 "ofType": null
               }
             },
@@ -9281,7 +9281,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "CateghoryConnection",
+        "name": "CategoryConnection",
         "description": "A connection to a list of items.",
         "fields": [
           {
@@ -9315,7 +9315,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "CateghoryEdge",
+                    "name": "CategoryEdge",
                     "ofType": null
                   }
                 }
@@ -9348,7 +9348,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryCreateInput",
+        "name": "CategoryCreateInput",
         "description": null,
         "fields": null,
         "inputFields": [
@@ -9427,13 +9427,13 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryCreateManyInlineInput",
+        "name": "CategoryCreateManyInlineInput",
         "description": null,
         "fields": null,
         "inputFields": [
           {
             "name": "connect",
-            "description": "Connect multiple existing Categhory documents",
+            "description": "Connect multiple existing Category documents",
             "type": {
               "kind": "LIST",
               "name": null,
@@ -9442,7 +9442,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereUniqueInput",
+                  "name": "CategoryWhereUniqueInput",
                   "ofType": null
                 }
               }
@@ -9453,7 +9453,7 @@
           },
           {
             "name": "create",
-            "description": "Create and connect multiple existing Categhory documents",
+            "description": "Create and connect multiple existing Category documents",
             "type": {
               "kind": "LIST",
               "name": null,
@@ -9462,7 +9462,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryCreateInput",
+                  "name": "CategoryCreateInput",
                   "ofType": null
                 }
               }
@@ -9478,16 +9478,16 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryCreateOneInlineInput",
+        "name": "CategoryCreateOneInlineInput",
         "description": null,
         "fields": null,
         "inputFields": [
           {
             "name": "connect",
-            "description": "Connect one existing Categhory document",
+            "description": "Connect one existing Category document",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereUniqueInput",
+              "name": "CategoryWhereUniqueInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -9496,10 +9496,10 @@
           },
           {
             "name": "create",
-            "description": "Create and connect one Categhory document",
+            "description": "Create and connect one Category document",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryCreateInput",
+              "name": "CategoryCreateInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -9513,7 +9513,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "CateghoryEdge",
+        "name": "CategoryEdge",
         "description": "An edge in a connection.",
         "fields": [
           {
@@ -9541,7 +9541,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "Categhory",
+                "name": "Category",
                 "ofType": null
               }
             },
@@ -9556,7 +9556,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryManyWhereInput",
+        "name": "CategoryManyWhereInput",
         "description": "Identifies documents",
         "fields": null,
         "inputFields": [
@@ -9571,7 +9571,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereInput",
+                  "name": "CategoryWhereInput",
                   "ofType": null
                 }
               }
@@ -9591,7 +9591,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereInput",
+                  "name": "CategoryWhereInput",
                   "ofType": null
                 }
               }
@@ -9611,7 +9611,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereInput",
+                  "name": "CategoryWhereInput",
                   "ofType": null
                 }
               }
@@ -9753,7 +9753,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereStageInput",
+              "name": "CategoryWhereStageInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -9765,7 +9765,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereStageInput",
+              "name": "CategoryWhereStageInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -9777,7 +9777,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereStageInput",
+              "name": "CategoryWhereStageInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -10479,7 +10479,7 @@
       },
       {
         "kind": "ENUM",
-        "name": "CateghoryOrderByInput",
+        "name": "CategoryOrderByInput",
         "description": null,
         "fields": null,
         "inputFields": null,
@@ -10562,7 +10562,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryUpdateInput",
+        "name": "CategoryUpdateInput",
         "description": null,
         "fields": null,
         "inputFields": [
@@ -10609,13 +10609,13 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryUpdateManyInlineInput",
+        "name": "CategoryUpdateManyInlineInput",
         "description": null,
         "fields": null,
         "inputFields": [
           {
             "name": "connect",
-            "description": "Connect multiple existing Categhory documents",
+            "description": "Connect multiple existing Category documents",
             "type": {
               "kind": "LIST",
               "name": null,
@@ -10624,7 +10624,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryConnectInput",
+                  "name": "CategoryConnectInput",
                   "ofType": null
                 }
               }
@@ -10635,7 +10635,7 @@
           },
           {
             "name": "create",
-            "description": "Create and connect multiple Categhory documents",
+            "description": "Create and connect multiple Category documents",
             "type": {
               "kind": "LIST",
               "name": null,
@@ -10644,7 +10644,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryCreateInput",
+                  "name": "CategoryCreateInput",
                   "ofType": null
                 }
               }
@@ -10655,7 +10655,7 @@
           },
           {
             "name": "delete",
-            "description": "Delete multiple Categhory documents",
+            "description": "Delete multiple Category documents",
             "type": {
               "kind": "LIST",
               "name": null,
@@ -10664,7 +10664,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereUniqueInput",
+                  "name": "CategoryWhereUniqueInput",
                   "ofType": null
                 }
               }
@@ -10675,7 +10675,7 @@
           },
           {
             "name": "disconnect",
-            "description": "Disconnect multiple Categhory documents",
+            "description": "Disconnect multiple Category documents",
             "type": {
               "kind": "LIST",
               "name": null,
@@ -10684,7 +10684,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereUniqueInput",
+                  "name": "CategoryWhereUniqueInput",
                   "ofType": null
                 }
               }
@@ -10695,7 +10695,7 @@
           },
           {
             "name": "set",
-            "description": "Override currently-connected documents with multiple existing Categhory documents",
+            "description": "Override currently-connected documents with multiple existing Category documents",
             "type": {
               "kind": "LIST",
               "name": null,
@@ -10704,7 +10704,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereUniqueInput",
+                  "name": "CategoryWhereUniqueInput",
                   "ofType": null
                 }
               }
@@ -10715,7 +10715,7 @@
           },
           {
             "name": "update",
-            "description": "Update multiple Categhory documents",
+            "description": "Update multiple Category documents",
             "type": {
               "kind": "LIST",
               "name": null,
@@ -10724,7 +10724,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryUpdateWithNestedWhereUniqueInput",
+                  "name": "CategoryUpdateWithNestedWhereUniqueInput",
                   "ofType": null
                 }
               }
@@ -10735,7 +10735,7 @@
           },
           {
             "name": "upsert",
-            "description": "Upsert multiple Categhory documents",
+            "description": "Upsert multiple Category documents",
             "type": {
               "kind": "LIST",
               "name": null,
@@ -10744,7 +10744,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryUpsertWithNestedWhereUniqueInput",
+                  "name": "CategoryUpsertWithNestedWhereUniqueInput",
                   "ofType": null
                 }
               }
@@ -10760,7 +10760,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryUpdateManyInput",
+        "name": "CategoryUpdateManyInput",
         "description": null,
         "fields": null,
         "inputFields": [
@@ -10783,7 +10783,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryUpdateManyWithNestedWhereInput",
+        "name": "CategoryUpdateManyWithNestedWhereInput",
         "description": null,
         "fields": null,
         "inputFields": [
@@ -10795,7 +10795,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "CateghoryUpdateManyInput",
+                "name": "CategoryUpdateManyInput",
                 "ofType": null
               }
             },
@@ -10811,7 +10811,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "CateghoryWhereInput",
+                "name": "CategoryWhereInput",
                 "ofType": null
               }
             },
@@ -10826,16 +10826,16 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryUpdateOneInlineInput",
+        "name": "CategoryUpdateOneInlineInput",
         "description": null,
         "fields": null,
         "inputFields": [
           {
             "name": "connect",
-            "description": "Connect existing Categhory document",
+            "description": "Connect existing Category document",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereUniqueInput",
+              "name": "CategoryWhereUniqueInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -10844,10 +10844,10 @@
           },
           {
             "name": "create",
-            "description": "Create and connect one Categhory document",
+            "description": "Create and connect one Category document",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryCreateInput",
+              "name": "CategoryCreateInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -10856,7 +10856,7 @@
           },
           {
             "name": "delete",
-            "description": "Delete currently connected Categhory document",
+            "description": "Delete currently connected Category document",
             "type": {
               "kind": "SCALAR",
               "name": "Boolean",
@@ -10868,7 +10868,7 @@
           },
           {
             "name": "disconnect",
-            "description": "Disconnect currently connected Categhory document",
+            "description": "Disconnect currently connected Category document",
             "type": {
               "kind": "SCALAR",
               "name": "Boolean",
@@ -10880,10 +10880,10 @@
           },
           {
             "name": "update",
-            "description": "Update single Categhory document",
+            "description": "Update single Category document",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryUpdateWithNestedWhereUniqueInput",
+              "name": "CategoryUpdateWithNestedWhereUniqueInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -10892,10 +10892,10 @@
           },
           {
             "name": "upsert",
-            "description": "Upsert single Categhory document",
+            "description": "Upsert single Category document",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryUpsertWithNestedWhereUniqueInput",
+              "name": "CategoryUpsertWithNestedWhereUniqueInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -10909,7 +10909,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryUpdateWithNestedWhereUniqueInput",
+        "name": "CategoryUpdateWithNestedWhereUniqueInput",
         "description": null,
         "fields": null,
         "inputFields": [
@@ -10921,7 +10921,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "CateghoryUpdateInput",
+                "name": "CategoryUpdateInput",
                 "ofType": null
               }
             },
@@ -10937,7 +10937,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "CateghoryWhereUniqueInput",
+                "name": "CategoryWhereUniqueInput",
                 "ofType": null
               }
             },
@@ -10952,7 +10952,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryUpsertInput",
+        "name": "CategoryUpsertInput",
         "description": null,
         "fields": null,
         "inputFields": [
@@ -10964,7 +10964,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "CateghoryCreateInput",
+                "name": "CategoryCreateInput",
                 "ofType": null
               }
             },
@@ -10980,7 +10980,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "CateghoryUpdateInput",
+                "name": "CategoryUpdateInput",
                 "ofType": null
               }
             },
@@ -10995,7 +10995,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryUpsertWithNestedWhereUniqueInput",
+        "name": "CategoryUpsertWithNestedWhereUniqueInput",
         "description": null,
         "fields": null,
         "inputFields": [
@@ -11007,7 +11007,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "CateghoryUpsertInput",
+                "name": "CategoryUpsertInput",
                 "ofType": null
               }
             },
@@ -11023,7 +11023,7 @@
               "name": null,
               "ofType": {
                 "kind": "INPUT_OBJECT",
-                "name": "CateghoryWhereUniqueInput",
+                "name": "CategoryWhereUniqueInput",
                 "ofType": null
               }
             },
@@ -11038,7 +11038,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryWhereComparatorInput",
+        "name": "CategoryWhereComparatorInput",
         "description": "This contains a set of filters that can be used to compare values internally",
         "fields": null,
         "inputFields": [
@@ -11061,7 +11061,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryWhereInput",
+        "name": "CategoryWhereInput",
         "description": "Identifies documents",
         "fields": null,
         "inputFields": [
@@ -11076,7 +11076,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereInput",
+                  "name": "CategoryWhereInput",
                   "ofType": null
                 }
               }
@@ -11096,7 +11096,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereInput",
+                  "name": "CategoryWhereInput",
                   "ofType": null
                 }
               }
@@ -11116,7 +11116,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereInput",
+                  "name": "CategoryWhereInput",
                   "ofType": null
                 }
               }
@@ -11258,7 +11258,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereStageInput",
+              "name": "CategoryWhereStageInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -11270,7 +11270,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereStageInput",
+              "name": "CategoryWhereStageInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -11282,7 +11282,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereStageInput",
+              "name": "CategoryWhereStageInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -11984,7 +11984,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryWhereStageInput",
+        "name": "CategoryWhereStageInput",
         "description": "The document in stages filter allows specifying a stage entry to cross compare the same document between different stages",
         "fields": null,
         "inputFields": [
@@ -11999,7 +11999,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereStageInput",
+                  "name": "CategoryWhereStageInput",
                   "ofType": null
                 }
               }
@@ -12019,7 +12019,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereStageInput",
+                  "name": "CategoryWhereStageInput",
                   "ofType": null
                 }
               }
@@ -12039,7 +12039,7 @@
                 "name": null,
                 "ofType": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereStageInput",
+                  "name": "CategoryWhereStageInput",
                   "ofType": null
                 }
               }
@@ -12053,7 +12053,7 @@
             "description": "This field contains fields which can be set as true or false to specify an internal comparison",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereComparatorInput",
+              "name": "CategoryWhereComparatorInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -12079,8 +12079,8 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "CateghoryWhereUniqueInput",
-        "description": "References Categhory record uniquely",
+        "name": "CategoryWhereUniqueInput",
+        "description": "References Category record uniquely",
         "fields": null,
         "inputFields": [
           {
@@ -16493,8 +16493,8 @@
             "deprecationReason": null
           },
           {
-            "name": "createCateghory",
-            "description": "Create one categhory",
+            "name": "createCategory",
+            "description": "Create one category",
             "args": [
               {
                 "name": "data",
@@ -16504,7 +16504,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryCreateInput",
+                    "name": "CategoryCreateInput",
                     "ofType": null
                   }
                 },
@@ -16515,7 +16515,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "Categhory",
+              "name": "Category",
               "ofType": null
             },
             "isDeprecated": false,
@@ -16667,8 +16667,8 @@
             "deprecationReason": null
           },
           {
-            "name": "deleteCateghory",
-            "description": "Delete one categhory from _all_ existing stages. Returns deleted document.",
+            "name": "deleteCategory",
+            "description": "Delete one category from _all_ existing stages. Returns deleted document.",
             "args": [
               {
                 "name": "where",
@@ -16678,7 +16678,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryWhereUniqueInput",
+                    "name": "CategoryWhereUniqueInput",
                     "ofType": null
                   }
                 },
@@ -16689,7 +16689,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "Categhory",
+              "name": "Category",
               "ofType": null
             },
             "isDeprecated": false,
@@ -16961,15 +16961,15 @@
             "deprecationReason": null
           },
           {
-            "name": "deleteManyCateghories",
-            "description": "Delete many Categhory documents",
+            "name": "deleteManyCategories",
+            "description": "Delete many Category documents",
             "args": [
               {
                 "name": "where",
                 "description": "Documents to delete",
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryManyWhereInput",
+                  "name": "CategoryManyWhereInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -16987,11 +16987,11 @@
               }
             },
             "isDeprecated": true,
-            "deprecationReason": "Please use the new paginated many mutation (deleteManyCateghoriesConnection)"
+            "deprecationReason": "Please use the new paginated many mutation (deleteManyCategoriesConnection)"
           },
           {
-            "name": "deleteManyCateghoriesConnection",
-            "description": "Delete many Categhory documents, return deleted documents",
+            "name": "deleteManyCategoriesConnection",
+            "description": "Delete many Category documents, return deleted documents",
             "args": [
               {
                 "name": "after",
@@ -17058,7 +17058,7 @@
                 "description": "Documents to delete",
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryManyWhereInput",
+                  "name": "CategoryManyWhereInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -17071,7 +17071,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "CateghoryConnection",
+                "name": "CategoryConnection",
                 "ofType": null
               }
             },
@@ -17552,8 +17552,8 @@
             "deprecationReason": null
           },
           {
-            "name": "publishCateghory",
-            "description": "Publish one categhory",
+            "name": "publishCategory",
+            "description": "Publish one category",
             "args": [
               {
                 "name": "to",
@@ -17587,7 +17587,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryWhereUniqueInput",
+                    "name": "CategoryWhereUniqueInput",
                     "ofType": null
                   }
                 },
@@ -17598,7 +17598,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "Categhory",
+              "name": "Category",
               "ofType": null
             },
             "isDeprecated": false,
@@ -18102,8 +18102,8 @@
             "deprecationReason": null
           },
           {
-            "name": "publishManyCateghories",
-            "description": "Publish many Categhory documents",
+            "name": "publishManyCategories",
+            "description": "Publish many Category documents",
             "args": [
               {
                 "name": "to",
@@ -18134,7 +18134,7 @@
                 "description": "Identifies documents in each stage to be published",
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryManyWhereInput",
+                  "name": "CategoryManyWhereInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -18152,11 +18152,11 @@
               }
             },
             "isDeprecated": true,
-            "deprecationReason": "Please use the new paginated many mutation (publishManyCateghoriesConnection)"
+            "deprecationReason": "Please use the new paginated many mutation (publishManyCategoriesConnection)"
           },
           {
-            "name": "publishManyCateghoriesConnection",
-            "description": "Publish many Categhory documents",
+            "name": "publishManyCategoriesConnection",
+            "description": "Publish many Category documents",
             "args": [
               {
                 "name": "after",
@@ -18259,7 +18259,7 @@
                 "description": "Identifies documents in each stage to be published",
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryManyWhereInput",
+                  "name": "CategoryManyWhereInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -18272,7 +18272,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "CateghoryConnection",
+                "name": "CategoryConnection",
                 "ofType": null
               }
             },
@@ -18887,8 +18887,8 @@
             "deprecationReason": null
           },
           {
-            "name": "schedulePublishCateghory",
-            "description": "Schedule to publish one categhory",
+            "name": "schedulePublishCategory",
+            "description": "Schedule to publish one category",
             "args": [
               {
                 "name": "releaseAt",
@@ -18946,7 +18946,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryWhereUniqueInput",
+                    "name": "CategoryWhereUniqueInput",
                     "ofType": null
                   }
                 },
@@ -18957,7 +18957,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "Categhory",
+              "name": "Category",
               "ofType": null
             },
             "isDeprecated": false,
@@ -19304,8 +19304,8 @@
             "deprecationReason": null
           },
           {
-            "name": "scheduleUnpublishCateghory",
-            "description": "Unpublish one categhory from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only.",
+            "name": "scheduleUnpublishCategory",
+            "description": "Unpublish one category from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only.",
             "args": [
               {
                 "name": "from",
@@ -19363,7 +19363,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryWhereUniqueInput",
+                    "name": "CategoryWhereUniqueInput",
                     "ofType": null
                   }
                 },
@@ -19374,7 +19374,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "Categhory",
+              "name": "Category",
               "ofType": null
             },
             "isDeprecated": false,
@@ -19673,8 +19673,8 @@
             "deprecationReason": null
           },
           {
-            "name": "unpublishCateghory",
-            "description": "Unpublish one categhory from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only.",
+            "name": "unpublishCategory",
+            "description": "Unpublish one category from selected stages. Unpublish either the complete document with its relations, localizations and base data or specific localizations only.",
             "args": [
               {
                 "name": "from",
@@ -19708,7 +19708,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryWhereUniqueInput",
+                    "name": "CategoryWhereUniqueInput",
                     "ofType": null
                   }
                 },
@@ -19719,7 +19719,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "Categhory",
+              "name": "Category",
               "ofType": null
             },
             "isDeprecated": false,
@@ -20199,8 +20199,8 @@
             "deprecationReason": null
           },
           {
-            "name": "unpublishManyCateghories",
-            "description": "Unpublish many Categhory documents",
+            "name": "unpublishManyCategories",
+            "description": "Unpublish many Category documents",
             "args": [
               {
                 "name": "from",
@@ -20231,7 +20231,7 @@
                 "description": "Identifies documents in each stage",
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryManyWhereInput",
+                  "name": "CategoryManyWhereInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -20249,11 +20249,11 @@
               }
             },
             "isDeprecated": true,
-            "deprecationReason": "Please use the new paginated many mutation (unpublishManyCateghoriesConnection)"
+            "deprecationReason": "Please use the new paginated many mutation (unpublishManyCategoriesConnection)"
           },
           {
-            "name": "unpublishManyCateghoriesConnection",
-            "description": "Find many Categhory documents that match criteria in specified stage and unpublish from target stages",
+            "name": "unpublishManyCategoriesConnection",
+            "description": "Find many Category documents that match criteria in specified stage and unpublish from target stages",
             "args": [
               {
                 "name": "after",
@@ -20356,7 +20356,7 @@
                 "description": "Identifies documents in draft stage",
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryManyWhereInput",
+                  "name": "CategoryManyWhereInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -20369,7 +20369,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "CateghoryConnection",
+                "name": "CategoryConnection",
                 "ofType": null
               }
             },
@@ -20876,8 +20876,8 @@
             "deprecationReason": null
           },
           {
-            "name": "updateCateghory",
-            "description": "Update one categhory",
+            "name": "updateCategory",
+            "description": "Update one category",
             "args": [
               {
                 "name": "data",
@@ -20887,7 +20887,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryUpdateInput",
+                    "name": "CategoryUpdateInput",
                     "ofType": null
                   }
                 },
@@ -20903,7 +20903,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryWhereUniqueInput",
+                    "name": "CategoryWhereUniqueInput",
                     "ofType": null
                   }
                 },
@@ -20914,7 +20914,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "Categhory",
+              "name": "Category",
               "ofType": null
             },
             "isDeprecated": false,
@@ -21266,8 +21266,8 @@
             "deprecationReason": null
           },
           {
-            "name": "updateManyCateghories",
-            "description": "Update many categhories",
+            "name": "updateManyCategories",
+            "description": "Update many categories",
             "args": [
               {
                 "name": "data",
@@ -21277,7 +21277,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryUpdateManyInput",
+                    "name": "CategoryUpdateManyInput",
                     "ofType": null
                   }
                 },
@@ -21290,7 +21290,7 @@
                 "description": "Documents to apply update on",
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryManyWhereInput",
+                  "name": "CategoryManyWhereInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -21308,11 +21308,11 @@
               }
             },
             "isDeprecated": true,
-            "deprecationReason": "Please use the new paginated many mutation (updateManyCateghoriesConnection)"
+            "deprecationReason": "Please use the new paginated many mutation (updateManyCategoriesConnection)"
           },
           {
-            "name": "updateManyCateghoriesConnection",
-            "description": "Update many Categhory documents",
+            "name": "updateManyCategoriesConnection",
+            "description": "Update many Category documents",
             "args": [
               {
                 "name": "after",
@@ -21346,7 +21346,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryUpdateManyInput",
+                    "name": "CategoryUpdateManyInput",
                     "ofType": null
                   }
                 },
@@ -21395,7 +21395,7 @@
                 "description": "Documents to apply update on",
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryManyWhereInput",
+                  "name": "CategoryManyWhereInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -21408,7 +21408,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "CateghoryConnection",
+                "name": "CategoryConnection",
                 "ofType": null
               }
             },
@@ -21896,8 +21896,8 @@
             "deprecationReason": null
           },
           {
-            "name": "upsertCateghory",
-            "description": "Upsert one categhory",
+            "name": "upsertCategory",
+            "description": "Upsert one category",
             "args": [
               {
                 "name": "upsert",
@@ -21907,7 +21907,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryUpsertInput",
+                    "name": "CategoryUpsertInput",
                     "ofType": null
                   }
                 },
@@ -21923,7 +21923,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryWhereUniqueInput",
+                    "name": "CategoryWhereUniqueInput",
                     "ofType": null
                   }
                 },
@@ -21934,7 +21934,7 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "Categhory",
+              "name": "Category",
               "ofType": null
             },
             "isDeprecated": false,
@@ -22090,7 +22090,7 @@
           },
           {
             "kind": "OBJECT",
-            "name": "Categhory",
+            "name": "Category",
             "ofType": null
           },
           {
@@ -22314,7 +22314,7 @@
                 "description": null,
                 "type": {
                   "kind": "ENUM",
-                  "name": "CateghoryOrderByInput",
+                  "name": "CategoryOrderByInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -22338,7 +22338,7 @@
                 "description": null,
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereInput",
+                  "name": "CategoryWhereInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -22357,7 +22357,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "Categhory",
+                    "name": "Category",
                     "ofType": null
                   }
                 }
@@ -23235,7 +23235,7 @@
           },
           {
             "kind": "OBJECT",
-            "name": "Categhory",
+            "name": "Category",
             "ofType": null
           }
         ]
@@ -23263,7 +23263,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryCreateManyInlineInput",
+              "name": "CategoryCreateManyInlineInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -23619,7 +23619,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereInput",
+              "name": "CategoryWhereInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -23631,7 +23631,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereInput",
+              "name": "CategoryWhereInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -23643,7 +23643,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereInput",
+              "name": "CategoryWhereInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -24753,7 +24753,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryUpdateManyInlineInput",
+              "name": "CategoryUpdateManyInlineInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -25420,7 +25420,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereInput",
+              "name": "CategoryWhereInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -25432,7 +25432,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereInput",
+              "name": "CategoryWhereInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -25444,7 +25444,7 @@
             "description": null,
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "CateghoryWhereInput",
+              "name": "CategoryWhereInput",
               "ofType": null
             },
             "defaultValue": null,
@@ -27387,8 +27387,8 @@
             "deprecationReason": null
           },
           {
-            "name": "categhories",
-            "description": "Retrieve multiple categhories",
+            "name": "categories",
+            "description": "Retrieve multiple categories",
             "args": [
               {
                 "name": "after",
@@ -27440,7 +27440,7 @@
               },
               {
                 "name": "locales",
-                "description": "Defines which locales should be returned.\n\nNote that `Categhory` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
+                "description": "Defines which locales should be returned.\n\nNote that `Category` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27467,7 +27467,7 @@
                 "description": null,
                 "type": {
                   "kind": "ENUM",
-                  "name": "CateghoryOrderByInput",
+                  "name": "CategoryOrderByInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -27507,7 +27507,7 @@
                 "description": null,
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereInput",
+                  "name": "CategoryWhereInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -27526,7 +27526,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "Categhory",
+                    "name": "Category",
                     "ofType": null
                   }
                 }
@@ -27536,8 +27536,8 @@
             "deprecationReason": null
           },
           {
-            "name": "categhoriesConnection",
-            "description": "Retrieve multiple categhories using the Relay connection interface",
+            "name": "categoriesConnection",
+            "description": "Retrieve multiple categories using the Relay connection interface",
             "args": [
               {
                 "name": "after",
@@ -27589,7 +27589,7 @@
               },
               {
                 "name": "locales",
-                "description": "Defines which locales should be returned.\n\nNote that `Categhory` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
+                "description": "Defines which locales should be returned.\n\nNote that `Category` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27616,7 +27616,7 @@
                 "description": null,
                 "type": {
                   "kind": "ENUM",
-                  "name": "CateghoryOrderByInput",
+                  "name": "CategoryOrderByInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -27656,7 +27656,7 @@
                 "description": null,
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "CateghoryWhereInput",
+                  "name": "CategoryWhereInput",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -27669,7 +27669,7 @@
               "name": null,
               "ofType": {
                 "kind": "OBJECT",
-                "name": "CateghoryConnection",
+                "name": "CategoryConnection",
                 "ofType": null
               }
             },
@@ -27677,12 +27677,12 @@
             "deprecationReason": null
           },
           {
-            "name": "categhory",
-            "description": "Retrieve a single categhory",
+            "name": "category",
+            "description": "Retrieve a single category",
             "args": [
               {
                 "name": "locales",
-                "description": "Defines which locales should be returned.\n\nNote that `Categhory` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
+                "description": "Defines which locales should be returned.\n\nNote that `Category` is a model without localized fields and will not be affected directly by this argument, however the locales will be passed on to any relational fields in the query's subtree for filtering.\nFor related models with localized fields in the query's subtree, the first locale matching the provided list of locales will be returned, entries with non matching locales will be filtered out.\n\nThis argument may be overwritten by another locales definition in a relational child field, this will effectively use the overwritten argument for the affected query's subtree.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27728,7 +27728,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "INPUT_OBJECT",
-                    "name": "CateghoryWhereUniqueInput",
+                    "name": "CategoryWhereUniqueInput",
                     "ofType": null
                   }
                 },
@@ -27739,14 +27739,14 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "Categhory",
+              "name": "Category",
               "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "categhoryVersion",
+            "name": "categoryVersion",
             "description": "Retrieve document version",
             "args": [
               {
@@ -30445,7 +30445,7 @@
           },
           {
             "kind": "OBJECT",
-            "name": "Categhory",
+            "name": "Category",
             "ofType": null
           },
           {
