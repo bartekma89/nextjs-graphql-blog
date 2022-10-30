@@ -59,3 +59,30 @@ query getCategories {
     slug
   }
 }
+
+query GetPostDetails($slug: String!) {
+  post(where: { slug: $slug }) {
+    author {
+      bio
+      name
+      id
+      photo {
+        url
+      }
+    }
+    createdAt
+    slug
+    title
+    excerpt
+    featuredImage {
+      url
+    }
+    categhories {
+      name
+      slug
+    }
+    content {
+      markdown
+    }
+  }
+}
