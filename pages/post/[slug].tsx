@@ -16,6 +16,7 @@ import {
   Categories,
   PostWidget,
 } from "../../components";
+import { GetPostDetailsQuery } from "../../generated-graphql/graphql";
 import { getPostDetails } from "../../services";
 import { getAllPost } from "../../services/getAllPosts";
 import { InfererGetStaticPathsType } from "../../types/global.types";
@@ -37,7 +38,15 @@ export default function PostDetailsPage({
     <div className="container mx-auto px-10 mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8">
-          <PostDetail post={post} />
+          <PostDetail
+            post={{
+              title: post.title,
+              imageUrl: post.featuredImage.url,
+              author: post.author!.name,
+              createdAt: post.createdAt,
+              description: post.content.markdown,
+            }}
+          />
           <Author />
           <CommentsForm />
           <Comments />
