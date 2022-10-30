@@ -1,12 +1,6 @@
-import {
-  GetStaticPaths,
-  GetStaticPathsContext,
-  GetStaticPathsResult,
-  GetStaticPropsContext,
-  GetStaticPropsResult,
-  InferGetStaticPropsType,
-} from "next";
+import { InferGetStaticPropsType } from "next";
 import { useRouter } from "next/router";
+import { serialize } from "next-mdx-remote/serialize";
 
 import {
   PostDetail,
@@ -16,10 +10,9 @@ import {
   Categories,
   PostWidget,
 } from "../../components";
-import { GetPostDetailsQuery } from "../../generated-graphql/graphql";
 import { getPostDetails } from "../../services";
 import { getAllPost } from "../../services/getAllPosts";
-import { InfererGetStaticPathsType } from "../../types/global.types";
+import type { InfererGetStaticPathsType } from "../../types/global.types";
 
 export default function PostDetailsPage({
   post,
@@ -44,7 +37,7 @@ export default function PostDetailsPage({
               imageUrl: post.featuredImage.url,
               author: post.author!.name,
               createdAt: post.createdAt,
-              description: post.content.markdown,
+              description: post.description,
             }}
           />
           <Author />
@@ -98,7 +91,10 @@ export async function getStaticProps({
 
   return {
     props: {
-      post: data,
+      post: {
+        ...data,
+        description: await serialize(data.content.markdown),
+      },
     },
   };
 }

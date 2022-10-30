@@ -1,9 +1,9 @@
 import CalendarDaysIcon from "@heroicons/react/24/outline/CalendarDaysIcon";
 import dayjs from "dayjs";
 import Image from "next/image";
-import Link from "next/link";
 
 import { ReactMarkdown } from "../components";
+import type { MarkdownResultType } from "../types/global.types";
 
 interface ComponentProps {
   post: {
@@ -11,7 +11,7 @@ interface ComponentProps {
     imageUrl: string;
     author: string;
     createdAt: string;
-    description: string;
+    description: MarkdownResultType;
   };
 }
 

@@ -1,29 +1,31 @@
 import Link from "next/link";
-import ReactMarkdownCmp from "react-markdown";
+import { MDXRemote } from "next-mdx-remote";
+import type { MarkdownResultType } from "../types/global.types";
 
 interface ComponentProps {
-  children: string;
+  children: MarkdownResultType;
 }
 
 export default function ReactMarkdown({ children }: ComponentProps) {
   return (
     <article className="prose lg:prose-lg">
-      <ReactMarkdownCmp
+      <MDXRemote
+        {...children}
         components={{
           a: ({ href, ...props }) => {
             if (!href) {
               return <a {...props} />;
             }
-            return (
+            return href.startsWith("/") ? (
               <Link href={href}>
                 <a {...props} />
               </Link>
+            ) : (
+              <a {...props} href={href} rel="noopener noreferrer"></a>
             );
           },
         }}
-      >
-        {children}
-      </ReactMarkdownCmp>
+      />
     </article>
   );
 }
