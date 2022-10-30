@@ -1,9 +1,9 @@
-import { gql, request } from "graphql-request";
+import { gql } from "graphql-request";
 import {
   GetSimilarPostsQuery,
   GetSimilarPostsQueryVariables,
 } from "../generated-graphql/graphql";
-import { graphqlAPI } from "../lib";
+import { requestClient } from "../graphql/graphqlRequest";
 
 export const GET_SIMILAR_POSTS = gql`
   query GetSimilarPosts($slug: String!, $categories: [String!]) {
@@ -24,10 +24,10 @@ export const GET_SIMILAR_POSTS = gql`
 `;
 
 export const getSimilarPosts = async (slug: string, categories: string[]) => {
-  const data = await request<
+  const data = await requestClient.request<
     GetSimilarPostsQuery,
     GetSimilarPostsQueryVariables
-  >(graphqlAPI, GET_SIMILAR_POSTS, { slug, categories });
+  >(GET_SIMILAR_POSTS, { slug, categories });
 
   return data.posts;
 };

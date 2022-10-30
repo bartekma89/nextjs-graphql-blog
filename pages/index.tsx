@@ -1,9 +1,7 @@
 import type { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import { PostCard, Categories, PostWidget } from "../components";
-import { GetAllPostsQuery } from "../generated-graphql/graphql";
-import { apolloClient } from "../graphql/apolloClient";
-import { GET_ALL_POSTS } from "../services/getAllPosts";
+import { getAllPost } from "../services/getAllPosts";
 
 const PostsPage = ({
   posts,
@@ -50,9 +48,7 @@ const PostsPage = ({
 export default PostsPage;
 
 export const getStaticProps = async () => {
-  const { data } = await apolloClient.query<GetAllPostsQuery>({
-    query: GET_ALL_POSTS,
-  });
+  const data = await getAllPost();
 
   if (!data) {
     return {
@@ -63,7 +59,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      posts: data.postsConnection.edges,
+      posts: data,
     },
   };
 };
