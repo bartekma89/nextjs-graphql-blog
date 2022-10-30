@@ -17,7 +17,7 @@ query GetAllPosts {
         featuredImage {
           url
         }
-        categhories {
+        categories {
           name
           slug
         }
@@ -41,7 +41,7 @@ query GetSimilarPosts($slug: String!, $categories: [String!]) {
   posts(
     where: {
       slug_not: $slug
-      AND: { categhories_some: { slug_in: $categories } }
+      AND: { categories_some: { slug_in: $categories } }
     }
   ) {
     title
@@ -77,7 +77,7 @@ query GetPostDetails($slug: String!) {
     featuredImage {
       url
     }
-    categhories {
+    categories {
       name
       slug
     }

@@ -46,7 +46,7 @@ export default function PostDetailsPage({
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
-            <PostWidget />
+            <PostWidget slug={post.slug} categories={post.categories} />
             <Categories />
           </div>
         </div>
@@ -94,6 +94,7 @@ export async function getStaticProps({
       post: {
         ...data,
         description: await serialize(data.content.markdown),
+        categories: data.categories.map(({ name, slug }) => ({ name, slug })),
       },
     },
   };

@@ -10,7 +10,7 @@ export const GET_SIMILAR_POSTS = gql`
     posts(
       where: {
         slug_not: $slug
-        AND: { categhories_some: { slug_in: $categories } }
+        AND: { categories_some: { slug_in: $categories } }
       }
     ) {
       title
