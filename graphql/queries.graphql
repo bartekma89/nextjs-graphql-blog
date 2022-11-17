@@ -86,3 +86,12 @@ query GetPostDetails($slug: String!) {
     }
   }
 }
+
+query GetComments($slug: String!) {
+  comments(where: { post: { slug: $slug } }) {
+    createdAt
+    id
+    comment
+    name
+  }
+}

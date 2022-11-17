@@ -40,9 +40,9 @@ export default function PostDetailsPage({
               description: post.description,
             }}
           />
-          <Author />
-          <CommentsForm />
-          <Comments />
+          <Author author={{ name: post.author?.name, bio: post.author?.bio }} />
+          <CommentsForm slug={post.slug} />
+          <Comments slug={post.slug} />
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
