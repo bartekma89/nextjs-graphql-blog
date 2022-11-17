@@ -23,7 +23,7 @@ const GET_POST_DETAILS = gql`
       featuredImage {
         url
       }
-      categhories {
+      categories {
         name
         slug
       }

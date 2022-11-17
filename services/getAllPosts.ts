@@ -22,7 +22,7 @@ export const GET_ALL_POSTS = gql`
           featuredImage {
             url
           }
-          categhories {
+          categories {
             name
             slug
           }

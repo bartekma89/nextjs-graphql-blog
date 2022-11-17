@@ -1,0 +1,19 @@
+mutation CreatePostComment(
+  $name: String!
+  $email: String!
+  $comment: String!
+  $slug: String!
+) {
+  createComment(
+    data: {
+      name: $name
+      email: $email
+      comment: $comment
+      post: { connect: { slug: $slug } }
+    }
+  ) {
+    comment
+    id
+    createdAt
+  }
+}
