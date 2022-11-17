@@ -27,18 +27,19 @@ const commentFormSchema = yup
 type CommentFormData = yup.InferType<typeof commentFormSchema>;
 
 interface ComponentProps {
-  slug?: string;
+  slug: string;
 }
 
 export default function CommentsForm({ slug }: ComponentProps) {
   const {
     register,
     handleSubmit,
-
     formState: { errors },
   } = useForm<CommentFormData>({
     resolver: yupResolver(commentFormSchema),
   });
+
+  console.log(slug);
 
   const handlePostComment = handleSubmit((data) => {
     const { comment, email, name } = data;
