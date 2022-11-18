@@ -11,6 +11,7 @@ export type MakeOptional<T, K extends keyof T> = Omit<T, K> & {
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
   [SubKey in K]: Maybe<T[SubKey]>;
 };
+/** All built-in and custom scalars, mapped to their actual values */
 
 export const CreatePostCommentDocument = {
   kind: "Document",
@@ -658,6 +659,176 @@ export const GetCommentsDocument = {
     },
   ],
 } as unknown as DocumentNode<GetCommentsQuery, GetCommentsQueryVariables>;
+export const GetCategoryPostDocument = {
+  kind: "Document",
+  definitions: [
+    {
+      kind: "OperationDefinition",
+      operation: "query",
+      name: { kind: "Name", value: "GetCategoryPost" },
+      variableDefinitions: [
+        {
+          kind: "VariableDefinition",
+          variable: { kind: "Variable", name: { kind: "Name", value: "slug" } },
+          type: {
+            kind: "NonNullType",
+            type: {
+              kind: "NamedType",
+              name: { kind: "Name", value: "String" },
+            },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: "SelectionSet",
+        selections: [
+          {
+            kind: "Field",
+            name: { kind: "Name", value: "postsConnection" },
+            arguments: [
+              {
+                kind: "Argument",
+                name: { kind: "Name", value: "where" },
+                value: {
+                  kind: "ObjectValue",
+                  fields: [
+                    {
+                      kind: "ObjectField",
+                      name: { kind: "Name", value: "categories_some" },
+                      value: {
+                        kind: "ObjectValue",
+                        fields: [
+                          {
+                            kind: "ObjectField",
+                            name: { kind: "Name", value: "slug" },
+                            value: {
+                              kind: "Variable",
+                              name: { kind: "Name", value: "slug" },
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+            selectionSet: {
+              kind: "SelectionSet",
+              selections: [
+                {
+                  kind: "Field",
+                  name: { kind: "Name", value: "edges" },
+                  selectionSet: {
+                    kind: "SelectionSet",
+                    selections: [
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "cursor" },
+                      },
+                      {
+                        kind: "Field",
+                        name: { kind: "Name", value: "node" },
+                        selectionSet: {
+                          kind: "SelectionSet",
+                          selections: [
+                            {
+                              kind: "Field",
+                              name: { kind: "Name", value: "author" },
+                              selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [
+                                  {
+                                    kind: "Field",
+                                    name: { kind: "Name", value: "bio" },
+                                  },
+                                  {
+                                    kind: "Field",
+                                    name: { kind: "Name", value: "name" },
+                                  },
+                                  {
+                                    kind: "Field",
+                                    name: { kind: "Name", value: "id" },
+                                  },
+                                  {
+                                    kind: "Field",
+                                    name: { kind: "Name", value: "photo" },
+                                    selectionSet: {
+                                      kind: "SelectionSet",
+                                      selections: [
+                                        {
+                                          kind: "Field",
+                                          name: { kind: "Name", value: "url" },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                            {
+                              kind: "Field",
+                              name: { kind: "Name", value: "createdAt" },
+                            },
+                            {
+                              kind: "Field",
+                              name: { kind: "Name", value: "slug" },
+                            },
+                            {
+                              kind: "Field",
+                              name: { kind: "Name", value: "title" },
+                            },
+                            {
+                              kind: "Field",
+                              name: { kind: "Name", value: "excerpt" },
+                            },
+                            {
+                              kind: "Field",
+                              name: { kind: "Name", value: "featuredImage" },
+                              selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [
+                                  {
+                                    kind: "Field",
+                                    name: { kind: "Name", value: "url" },
+                                  },
+                                ],
+                              },
+                            },
+                            {
+                              kind: "Field",
+                              name: { kind: "Name", value: "categories" },
+                              selectionSet: {
+                                kind: "SelectionSet",
+                                selections: [
+                                  {
+                                    kind: "Field",
+                                    name: { kind: "Name", value: "name" },
+                                  },
+                                  {
+                                    kind: "Field",
+                                    name: { kind: "Name", value: "slug" },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<
+  GetCategoryPostQuery,
+  GetCategoryPostQueryVariables
+>;
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -5779,12 +5950,6 @@ export enum Stage {
   PUBLISHED = "PUBLISHED",
 }
 
-export enum SystemDateTimeFieldVariation {
-  BASE = "BASE",
-  COMBINED = "COMBINED",
-  LOCALIZATION = "LOCALIZATION",
-}
-
 export type UnpublishLocaleInput = {
   /** Locales to unpublish */
   locale: Locale;
@@ -6269,6 +6434,12 @@ export enum RelationKind {
   UNION = "union",
 }
 
+export enum SystemDateTimeFieldVariation {
+  BASE = "base",
+  COMBINED = "combined",
+  LOCALIZATION = "localization",
+}
+
 export type CreatePostCommentMutationVariables = Exact<{
   name: Scalars["String"];
   email: Scalars["String"];
@@ -6392,4 +6563,39 @@ export type GetCommentsQuery = {
     comment: string;
     name: string;
   }>;
+};
+
+export type GetCategoryPostQueryVariables = Exact<{
+  slug: Scalars["String"];
+}>;
+
+export type GetCategoryPostQuery = {
+  __typename?: "Query";
+  postsConnection: {
+    __typename?: "PostConnection";
+    edges: Array<{
+      __typename?: "PostEdge";
+      cursor: string;
+      node: {
+        __typename?: "Post";
+        createdAt: any;
+        slug: string;
+        title: string;
+        excerpt: string;
+        author?: {
+          __typename?: "Author";
+          bio?: string | null;
+          name: string;
+          id: string;
+          photo?: { __typename?: "Asset"; url: string } | null;
+        } | null;
+        featuredImage: { __typename?: "Asset"; url: string };
+        categories: Array<{
+          __typename?: "Category";
+          name: string;
+          slug: string;
+        }>;
+      };
+    }>;
+  };
 };
