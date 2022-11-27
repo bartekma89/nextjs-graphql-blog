@@ -8,6 +8,7 @@ const nextConfig = {
   },
   env: {
     graphcmsURI: process.env.NEXT_PUBLIC_GRAPHCMS_URI,
+    graphcmsToken: process.env.NEXT_PUBLIC_GRAPHCMS_TOKEN,
   },
 };
 
