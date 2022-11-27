@@ -17,3 +17,10 @@ mutation CreatePostComment(
     createdAt
   }
 }
+
+mutation CreateAccount($email: String!, $password: String!) {
+  createAccount(data: { email: $email, password: $password }) {
+    id
+    stage
+  }
+}

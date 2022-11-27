@@ -39,8 +39,6 @@ export default function CommentsForm({ slug }: ComponentProps) {
     resolver: yupResolver(commentFormSchema),
   });
 
-  console.log(slug);
-
   const handlePostComment = handleSubmit((data) => {
     const { comment, email, name } = data;
     submitComment({ name, email, comment, slug }).then(() =>
@@ -53,7 +51,7 @@ export default function CommentsForm({ slug }: ComponentProps) {
   return (
     <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">
-        Leave a Replay
+        Register Form
       </h3>
       <form onSubmit={handlePostComment}>
         <div className="grid grid-cols-1 gap-4 mb-4">

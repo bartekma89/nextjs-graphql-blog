@@ -4,7 +4,10 @@ import {
   CreatePostCommentMutation,
   CreatePostCommentMutationVariables,
 } from "../generated-graphql/graphql";
-import { requestClient } from "../graphql/graphqlRequest";
+import {
+  authorizedRequestClient,
+  requestClient,
+} from "../graphql/graphqlRequest";
 
 const CREATE_POST_COMMENT = gql`
   mutation CreatePostComment(
@@ -31,7 +34,7 @@ const CREATE_POST_COMMENT = gql`
 export const createPostComment = async (postData: {
   data: CreatePostCommentMutationVariables;
 }) => {
-  const result = await requestClient.request<
+  const result = await authorizedRequestClient.request<
     CreatePostCommentMutation,
     CreatePostCommentMutationVariables
   >(CREATE_POST_COMMENT, postData.data);

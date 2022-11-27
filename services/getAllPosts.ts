@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 import { GetAllPostsQuery } from "../generated-graphql/graphql";
 import { requestClient } from "../graphql/graphqlRequest";
 
-export const GET_ALL_POSTS = gql`
+const GET_ALL_POSTS = gql`
   query GetAllPosts {
     postsConnection {
       edges {
